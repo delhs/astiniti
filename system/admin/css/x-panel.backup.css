@@ -1,0 +1,23 @@
+.panel_backup table tbody tr{
+	cursor:pointer;
+}
+
+.panel_backup table tbody tr.hover{
+	background: #494949;
+}
+
+.panel_backup table tbody td.fordelete{
+	width: 16px;
+}
+
+.panel_backup table tbody span.delete{
+	display:block;
+	width:16px;
+	height:13px;
+	opacity:0.6;
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.panel_backup table tbody span.delete.hover{
+	opacity:1;
+}

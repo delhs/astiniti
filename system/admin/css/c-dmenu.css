@@ -1,0 +1,180 @@
+/* reset to menu */
+ul.dmenu,
+ul.dmenu ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	z-index: 299;
+	display:none;
+	
+}
+
+ul.dmenu ul{
+	position:relative;
+	margin-left:12px;
+}
+
+
+ul.dmenu li{
+	margin: 0;
+}
+
+ul.dmenu li.separator{
+	width: 100%;
+	height: 1px;
+	margin: 6px 0;
+	border-top: 1px solid #535353;
+}
+
+ul.dmenu li a{
+	text-decoration:none;
+}
+/* END reset to menu */
+
+
+
+
+/* arrows style */
+ul.dmenu .arrow-right{
+	position: absolute;
+	margin-top: 13px;
+	right: 5px;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 4px solid rgba(0, 0, 0, 0);
+	border-left: 4px solid #AAA;
+	border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+/* end arrows style */
+
+
+
+
+
+
+/* second menu style */
+ul.dmenu ul{
+	width: 152px;
+	background:#474747;
+	padding:0px;
+}
+
+
+
+ul.dmenu li{
+	display:block;
+	position: relative;
+}
+
+
+ul.dmenu>li>ul li a{
+	text-decoration: none;
+	color: #FFF;
+	line-height: 34px;
+	padding: 0px 0px 0px 10px;
+	display: block;
+	font-size: 12px;
+	font-family: Tahoma;
+	width: 140px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	border-bottom: 1px solid #3A3232;
+}
+
+ul.dmenu>li>ul li a:hover{
+	background: #727272;
+}
+
+ul.dmenu>li>ul li a.act{
+	background: #727272;
+}
+/* 
+ul.dmenu ul li a:before{
+	content:" ";
+	position:absolute;
+	width:5px;
+	height:7px;
+	background:url('/img/arrow.gif');
+	top: 11px;
+	left: 12px;
+	background-repeat:no-repeat;
+} */
+
+ul.dmenu li a:hover{
+	color:white;
+}
+
+ul.dmenu>li>ul li:first-child a{
+	border-top:0;
+
+}
+/* END second menu style */
+
+
+
+
+/* first menu */
+ul.dmenu{
+	display: block;
+	width: 100%;
+	position:relative;
+}
+
+ul.dmenu>li{
+	width: 100%;
+	float: none;
+	height: auto;
+}
+
+
+ul.dmenu>li>a{
+	color: #FFF;
+	line-height: 34px;
+	border-top: 0;
+	font-size: 13px;
+	font-family: Tahoma;
+	text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+	border-left: 4px solid #292929;
+	background: #292929;
+	padding: 0 10px;
+	float:none;
+	display:block;
+	position: relative;
+}
+
+ul.dmenu>li>a.yellow.hover{
+	border-color:#FFE102;
+	background-color:#383838;
+}
+
+ul.dmenu>li>a.purple.hover{
+	border-color:#DA007A;
+	background-color:#383838;
+}
+
+ul.dmenu>li>a.green.hover{
+	border-color:#92D600;
+	background-color:#383838;
+}
+
+ul.dmenu>li>a.orange.hover{
+	border-color:#FFA300;
+	background-color:#383838;
+}
+
+ul.dmenu>li>a.blue.hover{
+	border-color:#008FFF;
+	background-color:#383838;
+}
+
+ul.dmenu>li>a.red.hover{
+	border-color:#D60000;
+	background-color:#383838;
+}
+
+
+
+/* END first menu active */
+
+

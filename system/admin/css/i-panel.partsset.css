@@ -1,0 +1,171 @@
+.panel_partsett form[name='partsett'] .field.fullurl a,
+.panel_partsett form[name='partsett'] .field.fullurl a:hover,
+.panel_partsett form[name='partsett'] .field.fullurl a{
+	float:left;
+	color:#93BAE4;
+	text-decoration:none;
+}
+
+.panel_partsett form[name='partsett'] input[name='expires_date'],
+.panel_partsett form[name='partsett'] input[name='edit_date']{
+	width: 130px;
+}
+
+.panel_partsett form[name='partsett'] .block{
+	overflow:visible!important;
+}
+
+.panel_partsett form[name='partsett']{
+	min-width: 550px;
+}
+
+.panel_partsett form[name='partsett'] .field.fullurl a>span,
+.panel_partsett form[name='partsett'] .field.fullurl label{
+	color:#73777A;
+	height: 22px;
+}
+
+.panel_partsett form[name='partsett'] .field.fullurl label{
+	margin-top: -8px;
+}
+
+.panel_partsett form[name='partsett'] .field.fullurl a>i{
+	font-style: normal;
+}
+
+.panel_partsett form[name='partsett'] .field.partid label,
+.panel_partsett form[name='partsett'] .field.partid span{
+	color:#73777A;
+	height: 44px;
+}	
+	
+.panel_partsett form[name='partsett'] .field.partid label{
+	margin-top: -8px;
+}
+
+.panel_partsett form[name='partsett'] .field{
+	clear: both;
+	width:100%;
+	margin: 5px 0;
+}
+
+
+.panel_partsett form[name='partsett'] .block.meta .field{
+	margin: 8px 0;
+	float: left;
+}
+
+.panel_partsett form[name='partsett'] label{
+	float:left;
+	width:300px;
+}
+
+
+.panel_partsett form[name='partsett'] textarea{
+	width: 515px;
+}
+
+/* .panel_partsett form[name='partsett'] .jq-selectbox__select{
+	width: 100%;
+} */
+
+.panel_partsett .ui-resizable-s{
+	margin-left:0px!important;
+}
+
+/* 
+.panel_partsett .ui-resizable{
+	float:left;
+}
+ */
+.panel_partsett button{
+	float:right;
+}
+
+.panel_partsett .icons{
+	width: 335px;
+	margin: 20px auto 0px auto;
+	position: relative;
+}
+
+.panel_partsett .icons>img{
+	width:335px;
+}
+
+.panel_partsett .icons.exist{
+	width:40px;
+}
+
+.panel_partsett .icons.exist>img{
+	width:40px;
+}
+
+.panel_partsett  a.removeicons{
+	display: inline-block;*zoom:1;*display:inline;
+	width: 24px;
+	height: 24px;
+	margin: 0px 0px 3px 9px;
+	background: url('/system/admin/img/icons.png');
+	background-position: 0px 0px;
+	position: relative;
+}
+
+/* .panel_partsett .icons div,
+.panel_partsett .icons img{
+	float: left;
+	background: url('/system/admin/img/defaulticons.png');
+	margin: 0 7px;
+	-webkit-box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.53);
+	-moz-box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.53);
+	box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.53);
+}
+
+.panel_partsett .icons img{
+	background:none;
+}
+
+.panel_partsett .icons div.icon40x40{
+	width:40px;
+	height:40px;
+	background-position:-240px 0px;
+}
+
+.panel_partsett .icons div.icon100x100{
+	width:100px;
+	height:100px;
+	background-position:-140px 0px;
+}
+
+.panel_partsett .icons div.icon140x140{
+	width:140px;
+	height:140px;
+	background-position:0px 0px;
+}
+
+.panel_partsett .icons span{
+	display:block;
+	position:absolute;
+	width:40px;
+	height:40px;
+	background:url('/system/admin/img/loader_40.gif');
+	display:none;
+}
+
+.panel_partsett .icons span.loader40x40{
+	left:7px;
+	top:0px;
+}
+
+.panel_partsett .icons span.loader100x100{
+	left: 90px;
+	top: 30px;
+}
+
+.panel_partsett .icons span.loader140x140{
+	left: 225px;
+	top: 50px;
+}
+ */
+.panel_partsett .CodeMirror{
+	height:100px;
+}

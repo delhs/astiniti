@@ -1,0 +1,171 @@
+.panel_parts .form{
+	min-width: 350px;
+}
+
+.panel_parts .toolbar a{
+	position: relative;
+	margin-right: 10px;
+	text-decoration: none;
+	color: #FFF;
+	border-bottom: 1px dashed #FFF;
+}
+
+.panel_parts .toolbar a:hover{
+	border-color:#A3A3A3;
+	color:#A3A3A3;
+}
+
+.panel_parts .toolbar a:active{
+	border-color:#6B6B6B;
+	color:#6B6B6B;
+}
+
+
+
+.panel_parts .mmenu>span:first-child{
+	color: #8F8F8F;
+	font-weight: bold;
+	text-shadow: none;
+	text-transform: uppercase;
+}
+
+.panel_parts .mmenu ul{
+	position:relative;
+	list-style:none;
+	margin:0 0 0 10px;
+	padding:0;
+	display: block;
+	background: url('/system/admin/img/vline.png') repeat-y;
+}
+
+.panel_parts .mmenu li{
+	background: url('/system/admin/img/node.png') no-repeat;
+	padding-left: 10px;
+}
+
+.panel_parts .mmenu ul>li:last-child {
+	background: #353535 url('/system/admin/img/lastnode.png') no-repeat;
+}
+
+
+.panel_parts .mmenu ul:first-child{
+	margin-left:30px;
+}
+
+.panel_parts .mmenu ul li{
+	display: block;
+}
+
+
+.panel_parts .mmenu ul li.ui-sortable-helper{
+	border: 1px solid #727272;
+	opacity:0.5;
+	background: #353535;
+	padding:4px;
+	box-shadow:3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.panel_parts .mmenu span.hlp{
+	margin: 0px 2px 0px 5px;
+}
+
+.panel_parts .mmenu ul li a{
+	color: white;
+	text-decoration:none;
+}
+
+.panel_parts .mmenu ul li a.disabled{
+	color:#B42F2F;
+}
+
+.panel_parts .mmenu ul li a.hidden{
+	color:#666666;
+}
+
+.panel_parts .mmenu ul li a.disabled.hidden{
+	color:#666666;
+	border-bottom:1px dotted #B42F2F;
+}
+
+.panel_parts .mmenu ul li a:hover{
+	color: #FFA442;
+	text-decoration:none;
+}
+
+.panel_parts .mmenu ul li a.act:hover,
+.panel_parts .mmenu ul li a.act{
+	color:lime;
+}
+
+.panel_parts .mmenu ul li.ui-sortable-helper a{
+	color: white;
+}
+
+
+.panel_parts .mmenu ul li.hold{
+	background: #3D3C3C;
+	-webkit-box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+	box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+
+.panel_parts .mmenu a.node_ctrl{
+	float: left;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -12px -84px;
+	margin: 4px 4px 0px 0px;
+	cursor:pointer;
+	opacity:0.8;
+}
+
+.panel_parts .mmenu a.node_ctrl.plus{
+	background-position: 0px -84px;
+}
+
+.panel_parts .mmenu a.node_ctrl.empty{
+	background:none;
+	width:0px;
+	height:0px;
+}
+
+.panel_parts .mmenu ul{
+	display:none;
+}
+
+.panel_parts .mmenu a.node_ctrl:hover{
+	opacity:1;
+}
+
+
+.panel_parts .mmenu a.add{
+	display:inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -50px -84px;
+	margin: 4px 0px 0px 4px;
+	cursor:pointer;	
+	opacity:0.5;
+}
+
+.panel_parts .mmenu a.add:hover{
+	opacity:1;
+}
+
+.panel_parts .mmenu a.delete{
+	display:inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: 4px 0px 0px 4px;
+	cursor:pointer;	
+	opacity:0.5;
+}
+
+.panel_parts .mmenu a.delete:hover{
+	opacity:1;
+}

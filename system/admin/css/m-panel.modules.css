@@ -1,0 +1,233 @@
+.panel_modules{
+	min-width: 405px;
+}
+.panel_modules .left{
+	width: 50%;
+	height: auto;
+	position: relative;
+	padding-top:30px;
+	float:left;
+	margin-right: 20px;
+	border-right: 1px solid #3F3F3F;
+	-webkit-box-shadow: 2px 0 0 0px #888;
+	-moz-box-shadow: 2px 0 0 0px #888;
+	box-shadow: 2px 0 0 0px #888;
+
+}
+
+.panel_modules .left>p{
+	margin:-30px 0 10px 0;
+	position: relative;
+	z-index: 3;
+}
+
+.panel_modules .left .mod_list{
+	height:100%;
+	padding-right: 20px;
+}	
+
+.panel_modules .right{
+	margin-left: 50%;
+	overflow: hidden;
+	min-width: 335px;
+	position: absolute;
+	width:50%;
+}
+
+.panel_modules .right form{
+	margin-left: 20px;
+}
+
+.panel_modules .right>p{
+	margin-left: 20px;
+}
+
+.panel_modules .left .mod_list>ul{
+	list-style:none;
+	width: 100%;
+	margin:0;
+	padding:0;
+    float:left;
+    clear:right;
+}
+
+.panel_modules .left .mod_list>ul>li{
+	width: 100%;
+	height:30px;
+	float: left;
+	clear: left;
+	background: #353535;
+	border: 1px solid #5C5C5C;
+	padding: 0;
+	color: #E2E7EB;
+	text-shadow: none;
+	margin: 2px 0;
+	padding: 6px 0px;
+	border-radius: 7px;
+}
+
+.panel_modules .left .mod_list>ul span.modname{
+	padding: 4px 6px;
+	width: 200px;
+	float: left;
+	height: 22px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.panel_modules .left .mod_list>ul li.hold{
+	background:#525252;
+}
+
+
+.panel_modules .left .mod_list>ul span.modregion{
+	padding: 4px 6px;
+	height: 22px;
+	display: block;
+	padding-left: 230px;
+	padding-right: 100px;
+	margin-top: -1px;
+}
+/* 
+.panel_modules .left .mod_list .jq-selectbox{
+	width:158px;
+} */
+
+.panel_modules .left .mod_list ul>li>span.dot{
+	float:left;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -128px -101px;
+	margin-left: 5px;
+	margin-top: 6px;
+}
+
+.panel_modules .left .mod_list ul a.delete{
+	float:left;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: 10px 0 0 3px;
+	cursor: pointer;
+	opacity: 0.5;
+	
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: -20px 10px 0px 3px;
+	cursor: pointer;
+	opacity: 0.5;
+	float: right;
+}
+
+.panel_modules .left .mod_list ul a.edit{
+	float: left;
+	width: 25px;
+	height: 21px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -25px 0;
+	margin: 4px;
+	cursor: pointer;
+	opacity: 0.5;
+	
+	float: right;
+	width: 25px;
+	height: 21px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -25px 0;
+	cursor: pointer;
+	opacity: 0.5;
+	margin: -25px 30px 0px 4px;
+}
+
+.panel_modules .left .mod_list ul a.delete:hover{
+	opacity:1;
+}
+
+.panel_modules .left .mod_list ul a.edit:hover{
+	opacity:1;
+}
+
+.panel_modules .left .mod_list ul span.hlp{
+	margin: 5px 10px 0px 0px;
+	float: right;
+	
+	margin: -20px 80px 0px 0px;
+	float: right;
+}
+
+
+.panel_modules .right .mod_list ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.panel_modules .right .mod_list ul>li>span{
+	display: inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -128px -101px;
+	margin-right: 3px;
+}
+
+.panel_modules .right .mod_list a.add{
+	display: inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -50px -84px;
+	margin: 4px 0px 0px 4px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.panel_modules span.justplusicon{
+	display: inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -50px -84px;
+}
+
+.panel_modules .right .mod_list a.add:hover{
+	opacity:1;
+}
+
+@media all and (max-width:980px){
+	.panel_modules .left .mod_list{
+		padding-right: 0;
+	}
+	.panel_modules .left .mod_list>ul{
+		width:100%;
+	}
+	.panel_modules .left .mod_list i{
+		display:block;
+	}
+	.panel_modules .left{
+		float: none;
+		width: auto;
+		margin-right: 0;
+		min-height: 0!important;
+		box-shadow:none!important;
+		border-right:none!important;
+	}
+	.panel_modules .right{
+		margin:0;
+		width:100%;
+	}
+	.panel_modules .right form{
+		margin-left: 0;
+	}
+	
+	.panel_modules .right>p{
+		margin-left: 0;
+		margin-top: 30px;
+	}
+
+}

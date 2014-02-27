@@ -1,0 +1,43 @@
+.panel_plugins ul.plug_list{
+	list-style: none;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	position: relative;
+	display: block;
+	padding: 0px 0px;
+}
+
+.panel_plugins ul.plug_list li{
+	width: 100%;
+	display: block;
+	height: 100%;
+	padding: 0;
+	margin: 2px 0;
+	position: relative;
+}
+
+.panel_plugins ul.plug_list li a{
+	width: 99%;
+	height: 30px;
+	background: #353535;
+	border: 1px solid #5C5C5C;
+	color: #E2E7EB;
+	text-shadow: none;
+	padding: 6px 0px;
+	border-radius: 7px;
+	display: block;
+	text-decoration: none;
+}
+
+.panel_plugins ul.plug_list li a:hover{
+	background: #464545;
+}
+
+.panel_plugins ul.plug_list li a span{
+	position: relative;
+	margin: 4px 10px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

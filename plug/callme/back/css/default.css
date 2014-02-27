@@ -1,0 +1,87 @@
+.plug_callme{
+	min-width: 760px;
+}
+
+.plug_callme table span{
+	white-space: normal;
+	word-break: break-word;
+}
+
+.plug_callme .recipient_email form input[type='text'],
+.plug_callme .recipient_sms form input[type='text']{
+	width:98%;
+}
+
+.plug_callme .recipient_email form button,
+.plug_callme .recipient_sms form button{
+	float:right;
+}
+
+.plug_callme .recipient_email form button[name='save'],
+.plug_callme .recipient_sms form button[name='save']{
+	margin-left:20px;
+}
+
+.plug_callme .recipient_email form td.delete,
+.plug_callme .recipient_sms form td.delete{
+	cursor: pointer;
+}
+
+.plug_callme .recipient_email form td.delete span.icon,
+.plug_callme .recipient_sms form td.delete span.icon{
+	display: block;
+	width: 16px;
+	height: 13px;
+	margin: 0 auto;
+	background: url('/system/admin/img/icons.png') no-repeat -62px -84px;
+	opacity: 0.6;
+}
+
+.plug_callme .recipient_email form td.delete:hover span.icon,
+.plug_callme .recipient_sms form td.delete:hover span.icon{
+	opacity: 1;
+}
+
+.plug_callme .recipient_email form td.delete:active span.icon,
+.plug_callme .recipient_sms form td.delete:active span.icon{
+	margin-top: -3px;
+}
+
+.plug_callme .email_sett textarea[name='text']{
+	height:400px;
+}
+
+.plug_callme .email_sett button[name='save']{
+	float:right;
+}
+
+.plug_callme .sms_sett textarea[name='text']{
+	height: 400px;
+	width: 100%;
+	resize: none;
+}
+
+.plug_callme .sms_sett button[name='save']{
+	float:right;
+}
+
+.plug_callme .sms_sett .charcount{
+	color: #91EB80;
+}
+
+.plug_callme .sms_center button[name='save']{
+	float:right;
+}
+
+#sms_center_limit,
+#sms_center_balance{
+	margin: 16px 0px;
+}
+
+.plug_callme .history button[name='clear']{
+	float:right;
+}
+
+.plug_callme .security button[name='save']{
+	float:right;
+}

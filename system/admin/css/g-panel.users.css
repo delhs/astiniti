@@ -1,0 +1,308 @@
+.panel_users .dash .iconbig.createusericon{
+	background-position:0px -126px;
+}
+
+
+.panel_users .dash .iconbig.userslisticon{
+	background-position:-50px -126px;
+}
+
+.panel_users .userslist .li_icons .hlp{
+	margin-left:9px;
+}
+
+
+
+
+.panel_users .dash .iconbig.grouplisticon{
+	background-position:-100px -126px;
+}
+
+.panel_users .privileges label,
+.panel_users .privilegies label,
+.panel_users .privilegecheck label{
+	line-height: initial!important;
+}
+
+.panel_users form[name='grouplist'] .privileges label,
+.panel_users form[name='groupcreate'] .privilegecheck label,
+.panel_users form[name='groupedit'] .privilegecheck label{
+	float:none!important;
+}
+
+.panel_users .dash .iconbig.groupcreateicon{
+	background-position:-150px -126px;
+}
+
+/* .panel_users label{
+	line-height: initial;
+} */
+
+.panel_users .jq-checkbox,
+.panel_users .jq-radio{
+	margin-top: 0!important;
+}
+
+/* create user */
+.panel_users form[name='createUser']{
+
+}
+
+
+.panel_users form[name='createUser'] .privilegecheck .toolbar{
+	margin: 18px 2px;
+}
+
+.panel_users form[name='createUser'] .privilegecheck .toolbar a{
+	position: relative;
+	margin-right: 10px;
+	text-decoration: none;
+	color: #FFF;
+	border-bottom: 1px dashed #FFF;
+}
+
+.panel_users form[name='createUser'] .privilegecheck .toolbar a:hover{
+	border-color: #A3A3A3;
+	color: #A3A3A3;
+}
+
+.panel_users form[name='createUser'] .privilegecheck .toolbar a:active{
+	border-color: #6B6B6B;
+	color: #6B6B6B;
+}
+
+.panel_users form[name='createUser'] .block{
+
+}
+
+.panel_users form[name='createUser'] .forbutton{
+	float: left;
+	width: 100%;
+}
+
+.panel_users form[name='createUser'] .privilegecheck label{
+	float:none;
+	width:auto;
+}
+
+.panel_users form[name='createUser']  label[for='avow']{
+	float:none;
+	width:auto;
+}
+
+/* .panel_users form[name='createUser'] input[type='text']{
+	width: 400px;
+}
+ */
+
+.panel_users form[name='createUser'] button {
+	float:right;
+}
+
+/* users list */
+
+.panel_users .userslist>ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+    float:left;
+    clear:right;
+}
+
+.panel_users .userslist>ul>li{
+	width: 130px;
+	height:22px;
+	float: left;
+	clear: left;
+	background: #353535;
+	border-right: 1px solid #5C5C5C;
+	border-bottom: 1px solid #5C5C5C;
+	padding: 4px 2px;
+	color: #E2E7EB;
+	text-shadow: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.panel_users .userslist>ul.li_groups>li{
+	width:240px;
+	overflow: initial;
+}
+
+.panel_users .userslist>ul.li_icons>li{
+	width:30px;
+}
+
+.panel_users .userslist>ul>li:first-child{
+	color: #D344B1;
+	border-top: 1px solid #5C5C5C;
+}
+
+
+.panel_users .userslist>ul>li a.icon.delete{
+	background-position:0 0;
+}
+
+.panel_users .userslist>ul>li a.icon.edit{
+	background:url(/system/admin/img/icons.png);
+	background-position:-25px 0;
+}
+
+
+
+/* users group list */
+.panel_users .grouplist{
+	width: 778px;
+	background: #4E4E4E;
+	margin: 0 auto;
+	left: 0;
+	padding: 8px;
+	border: 1px solid #7E7A7A;
+	-webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	behavior: url('PIE/PIE.htc');
+}
+
+.panel_users .grouplist>ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+    float:left;
+    clear:right;
+}
+
+.panel_users .grouplist>ul>li{
+	width: 100%;
+	height: 385px;
+	float: left;
+	clear: left;
+	background: #353535;
+	border: 1px solid #5C5C5C;
+	padding: 4px 2px;
+	color: #E2E7EB;
+	text-shadow: none;
+}
+
+.panel_users .field p{
+	margin-top: 17px;
+}
+
+.panel_users .grouplist>ul>li:first-child{
+	color: #D344B1;
+	height:22px;
+}
+
+.panel_users .grouplist>ul.names>li{
+	width:230px;
+}
+
+.panel_users .grouplist>ul.privileges>li{
+	width:464px;
+}
+
+.panel_users .grouplist .forbutton {
+	float: left;
+	width: 100%;
+	margin-top: 7px;
+}
+
+.panel_users .grouplist button{
+	float:right;
+}
+
+.panel_users .grouplist>ul.li_icons>li{
+	width:30px;
+}
+.panel_users .grouplist>ul>li a.icon{
+	text-decoration: none;
+	display: block;
+	width: 25px;
+	height: 21px;
+	margin: 0px 0px 0px 3px;
+}
+
+.panel_users .grouplist>ul>li a.icon.delete{
+	background-position:0 0;
+}
+
+.panel_users .grouplist>ul>li a.icon.edit{
+	background-position:-25px 0;
+}
+
+/* user edit  */
+
+
+.panel_users form[name='useredit'] .block.privilegies .toolbar{
+	margin: 18px 2px;
+}
+
+.panel_users form[name='useredit'] .block.privilegies .toolbar a{
+	position: relative;
+	margin-right: 10px;
+	text-decoration: none;
+	color: #FFF;
+	border-bottom: 1px dashed #FFF;
+}
+
+.panel_users form[name='useredit'] .block.privilegies .toolbar a:hover{
+	border-color: #A3A3A3;
+	color: #A3A3A3;
+}
+
+.panel_users form[name='useredit'] .block.privilegies .toolbar a:active{
+	border-color: #6B6B6B;
+	color: #6B6B6B;
+}
+
+.panel_users form[name='useredit'] .block.superadmininf{
+	font-size: 17px;
+	color: #FFC8C8;
+	white-space:normal!important;
+}
+
+.panel_users form[name='useredit'] .forbutton{
+	float: left;
+	width: 100%;
+}
+
+.panel_users form[name='useredit'] label{
+	float:left;
+	width:210px;
+	margin-right: 10px;
+}
+
+.panel_users form[name='useredit'] .privilegecheck label{
+	float:none;
+	width:auto;
+}
+
+.panel_users form[name='useredit']  label[for='avow']{
+	float:none;
+	width:auto;
+}
+/* .panel_users form[name='useredit'] .jq-selectbox__select {
+	width: 355px;
+} */
+
+.panel_users form[name='useredit'] button {
+	float:right;
+}
+
+/* group create */
+
+.panel_users form[name='groupcreate'] button{
+	float:right;
+}
+
+
+/* group edit */
+
+.panel_users form[name='groupedit'] button{
+	float:right;
+}
+

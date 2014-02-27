@@ -1,0 +1,57 @@
+body .air-mode-helper-elem{
+	outline: #000 dotted 4px;
+	background: red;
+	cursor: pointer;
+	display:none;
+	opacity: 0.6!important;
+	z-index: 9999;
+}
+
+body .air-mode-helper-elem.air-mode-helper-word{
+	background: #057DFF;
+}
+
+body .air-mode-helper-elem.air-mode-helper-module{
+	background: lime;
+}
+
+body .air-mode-helper-elem.air-mode-helper-content{
+	background: purple;
+}
+
+body .air-mode-helper-elem.air-mode-helper-h1{
+	background: #F5CE05;
+}
+
+body .air-mode-helper-elem.hover{
+	opacity: 0.5!important;
+	outline: #FFF dotted 4px;
+}
+
+body .air-mode-helper-elem .air-mode-helper-elem-info{
+	position: absolute;
+	background: #000;
+	color: #FFF;
+	left: 0;
+	top: 0;
+	font-family: 'Arial';
+	font-size: 12px;
+	border: 1px solid #FFF;
+	padding: 0px 7px;
+	-webkit-box-shadow: 1px 1px 10px 0px #000;
+	-moz-box-shadow: 1px 1px 10px 0px #000;
+	box-shadow: 1px 1px 20px 0px #000;
+	display:none;
+}
+
+body .air-mode-overlay{
+	background: #000;
+	opacity: 0.6;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9998;
+	display:none;
+}

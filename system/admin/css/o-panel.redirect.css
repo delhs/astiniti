@@ -1,0 +1,61 @@
+.panel_redirect form{
+	width: 870px;
+}
+
+.panel_redirect form>.block>p{
+	display: block;
+	white-space: normal;
+}
+
+.panel_redirect button{
+	float:right;
+	margin-left:20px;
+}
+
+.panel_redirect ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	float:left;
+}
+
+.panel_redirect ul>li{
+	float:left;
+	clear:left;
+}
+
+.panel_redirect ul .from,
+.panel_redirect ul .to{
+	float:left;
+	width: 395px;
+	margin: 0px 10px 10px 0px;
+}
+
+.panel_redirect ul span.from,
+.panel_redirect ul span.to{
+	margin-left:10px;
+}
+
+.panel_redirect ul .actions{
+	float:left;
+	width:25px;
+}
+
+.panel_redirect a.actions{
+	float:left;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: 9px 0px 0px 0px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.panel_redirect a.actions:hover{
+	opacity:1;
+}
+
+.panel_redirect ul .from{
+	margin-right:10px;
+}

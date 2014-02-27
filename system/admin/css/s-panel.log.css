@@ -1,0 +1,131 @@
+.panel_log{
+
+}
+
+.panel_log .block{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.panel_log .form{
+	width: 1590px;
+}
+
+.panel_log .list>ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+    float:left;
+    clear:right;
+}
+
+.panel_log .list>ul>li{
+	width: 130px;
+	height:22px;
+	float: left;
+	clear: left;
+	background: #353535;
+	border-right: 1px solid #5C5C5C;
+	border-bottom: 1px solid #5C5C5C;
+	padding: 4px 2px;
+	color: #E2E7EB;
+	text-shadow: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.panel_log .list>ul li.hover{
+	background: #494949;
+	cursor:default;
+}
+
+.panel_log .list>ul>li:first-child{
+	color: #D344B1;
+	background: #353535;
+	border-top: 1px solid #5C5C5C;
+}
+/* 
+.panel_log ul.nav{
+	list-style: none;
+}
+
+.panel_log ul.nav li{
+	float: left;
+}
+
+.panel_log ul.nav li a{
+	margin: 0 3px;
+	padding: 1px 6px;
+	background: #FFF;
+	text-decoration: none;
+	color: #808080;
+	text-shadow: none;
+	font-weight: bold;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	-moz-box-shadow: 0px 0px 8px #000;
+	box-shadow: 0px 0px 8px #000;
+}
+
+.panel_log ul.nav li a.back{
+	margin-right:15px;
+}
+
+.panel_log ul.nav li a.next{
+	margin-left:15px;
+}
+
+.panel_log ul.nav li a:hover{
+	-webkit-box-shadow: 0px 0px 8px #F85927;
+	-moz-box-shadow: 0px 0px 8px #F85927;
+	box-shadow: 0px 0px 8px #F85927;
+	color: #C0470F;
+}
+
+.panel_log ul.nav li a.act{
+	color: #DA2B0A;
+	-webkit-box-shadow: 0px 0px 8px #F85927;
+	-moz-box-shadow: 0px 0px 8px #F85927;
+	box-shadow: 0px 0px 8px #F85927;
+} */
+
+.panel_log a[data-sort]{
+	display:inline-block;*display:inline;*zoom:1;
+	width: 10px;
+    height: 10px;
+    background: #252525;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	margin: 6px 0px 0px 4px;
+	position: absolute;
+}
+
+.panel_log a[data-sort].asc{
+	width:0;
+	height:0;
+	border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 6px solid #949494;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+	background:none;
+	margin: 8px 0px 0px 4px;
+}
+.panel_log a[data-sort].desc{
+	width:0;
+	height:0;
+	border-left: 5px solid rgba(0, 0, 0, 0);
+	border-right: 5px solid rgba(0, 0, 0, 0);
+	border-top: 6px solid #949494;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+	background:none;
+	margin: 8px 0px 0px 4px;
+}

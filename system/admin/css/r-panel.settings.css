@@ -1,0 +1,53 @@
+.panel_settings form[name='settings']{
+	min-width: 550px;
+}
+
+.panel_settings a.del_ip{
+	display: inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: 4px 0px 0px 4px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.panel_settings a.del_ip:hover{
+	opacity:1;
+}
+
+
+.panel_settings input[name='exception_ip[]']{
+	width: 152px;
+	text-align: center;
+}
+
+.panel_settings button[name='add_ip']{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.panel_settings button[name='save']{
+	float:right;
+}
+
+.panel_settings button[name='recreate_robots_txt']{
+	margin-top:10px;
+}
+
+.panel_settings .field.gzip_level span.gzip_level{
+	display: inline-block; *display:inline;*zoom:1;
+	vertical-align: middle;
+	margin:2px 13px 0 3px;
+	position: absolute;
+}
+
+.panel_settings .field.gzip_level label.gzip_level.disabled{
+	color:gray;
+}
+
+.panel_settings .field.gzip_level span.jq-radio{
+	margin-right:10px;
+	margin-top: 22px;
+}

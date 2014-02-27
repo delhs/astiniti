@@ -1,0 +1,9 @@
+<?php /* Smarty version 2.6.27, created on 2014-02-12 10:17:11
+         compiled from brandsPage.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'brandsPage.tpl', 10, false),)), $this); ?>
+<?php echo '<div class="plug_catalog catalog_brands_page"><h1>Производители</h1>'; ?><?php if (isset ( $this->_tpl_vars['brandsArray'] )): ?><?php echo '<ul>'; ?><?php $_from = $this->_tpl_vars['brandsArray']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['letter'] => $this->_tpl_vars['brands']):
+?><?php echo ''; ?><?php $_from = $this->_tpl_vars['brands']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['brand']):
+?><?php echo '<li><a href="'; ?><?php echo $this->_tpl_vars['brand']['url']; ?><?php echo '" title="'; ?><?php echo ((is_array($_tmp=$this->_tpl_vars['brand']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp) : smarty_modifier_escape($_tmp)); ?><?php echo '">'; ?><?php if ($this->_tpl_vars['brand']['brand_logo'] != ''): ?><?php echo '<img src="'; ?><?php echo $this->_tpl_vars['brand']['brand_logo']; ?><?php echo '" />'; ?><?php else: ?><?php echo ''; ?><?php echo ((is_array($_tmp=$this->_tpl_vars['brand']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp) : smarty_modifier_escape($_tmp)); ?><?php echo ''; ?><?php endif; ?><?php echo '</a></li>'; ?><?php endforeach; endif; unset($_from); ?><?php echo ''; ?><?php endforeach; endif; unset($_from); ?><?php echo '</ul>'; ?><?php else: ?><?php echo '<p>Производителей не найдено.</p>'; ?><?php endif; ?><?php echo '</div>'; ?>
