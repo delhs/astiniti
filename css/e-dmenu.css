@@ -1,0 +1,170 @@
+/* reset to menu */
+ul.dmenu,
+ul.dmenu ul{
+	z-index: 299;
+	display:none;
+	margin:0;
+	padding:0;
+	max-width: 800px;
+	list-style:none;
+}
+
+ul.dmenu ul{
+	position:absolute;
+}
+
+
+ul.dmenu li{
+	position:relative;
+	display:block;
+	float:left;
+}
+
+ul.dmenu li a{
+	float:left;
+	text-decoration:none;
+}
+/* END reset to menu */
+
+
+
+
+/* arrows style */
+
+
+/* end arrows style */
+
+
+
+
+
+
+/* second menu style */
+ul.dmenu ul{
+	padding:0px;
+	background: #1D1C17;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+ul.dmenu li{
+	display:block;
+}
+
+
+ul.dmenu>li>ul li a{
+	display: block;
+	padding: 6px 0px 6px 14px;
+	width: 137px;
+	border-top: 1px solid #424142;
+	color: #9E9E9E;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+ul.dmenu>li>ul li a.act{
+	color: #79A6D6;
+}
+
+ul.dmenu>li ul .arrow{
+	position: relative;
+	float: right;
+	margin: 8px 2px 0px 0px;
+	width: 0;
+	height: 0;
+	border-top: 3px solid rgba(0, 0, 0, 0);
+	border-bottom: 3px solid rgba(0, 0, 0, 0);
+	border-left: 5px solid #797979;
+}
+
+ul.dmenu ul li a:before{
+	position:absolute;
+	top: 11px;
+	left: 12px;
+	width:5px;
+	height:7px;
+	background-repeat:no-repeat;
+	content:" ";
+}
+
+ul.dmenu li a:hover{
+	color:white;
+}
+
+ul.dmenu>li>ul li:first-child a{
+	border-top:0;
+
+}
+/* END second menu style */
+
+
+
+
+/* first menu */
+ul.dmenu{
+	position: relative;
+	top: 19px;
+	display: block;
+	float: left;
+}
+
+ul.dmenu>li{
+	position:relative;
+	float:left;
+	width:auto;
+}
+
+
+ul.dmenu>li>a{
+	position:relative;
+	margin: 0;
+	padding: 0 24px;
+	width: auto;
+	border-top: 0;
+	background: none;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 30px;
+	text-shadow: 1px 1px 1px #646464;
+	-webkit-transition:.4s ease;
+	-moz-transition:.4s ease;
+	transition:.4s ease;
+}
+
+ul.dmenu>li:first-child>a{
+	border:0;
+}
+
+ul.dmenu>li .arrow{
+	position: relative;
+	float: right;
+	margin: 13px -5px 0px 5px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid #FFF;
+	border-right: 3px solid rgba(0, 0, 0, 0);
+	border-left: 3px solid rgba(0, 0, 0, 0);
+}
+
+ul.dmenu>li>a:hover{
+	background: #272727;
+}
+/* END first menu */
+
+
+
+/* first menu active */
+ul.dmenu>li>a.act:hover{
+	
+}
+
+ul.dmenu>li>a.act{
+	background: #272727;
+}
+
+
+/* END first menu active */
+
+

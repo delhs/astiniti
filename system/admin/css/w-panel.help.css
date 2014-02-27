@@ -1,0 +1,68 @@
+.panel_help .tiles{
+	padding: 8px;
+	min-width:600px;
+}
+
+.panel_help .tiles>ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.panel_help .tiles>ul>li{
+	width: auto;
+	height: 200px;
+	padding: 5px;
+	margin: 8px;
+	float: left;
+	overflow: hidden;
+	background: #505050;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 0px 0px 2px #C4C4C4, 0px 0px 7px 4px rgba(0, 0, 0, 0.27);
+	-moz-box-shadow: 0px 0px 0px 2px #C4C4C4, 0px 0px 7px 4px rgba(0, 0, 0, 0.27);
+	box-shadow: 0px 0px 0px 2px #C4C4C4, 0px 0px 7px 4px rgba(0, 0, 0, 0.27);
+}
+
+.panel_help .tiles>ul>li p,
+.panel_help .tiles>ul>li i,
+.panel_help .tiles>ul>li b,
+.panel_help .tiles>ul>li strong,
+.panel_help .tiles>ul>li span{
+	color: #FFF;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.49)!important;
+	font-size: 16px;
+}
+
+.panel_help .tiles>ul>li a{
+	font-size: 16px;
+	color: #FFA500;
+	text-decoration: none;
+	border-bottom: 1px dashed #FFA500;
+}
+
+.panel_help .tiles>ul>li a:hover{
+	color: #FFDEA1;
+	text-decoration: none;
+	border-bottom: 1px dashed #FFDEA1;
+}
+
+.panel_help .tiles>ul>li a:active{
+	color: #C98800;
+	text-decoration: none;
+	border-bottom: 1px dashed #C98800;
+}
+
+.panel_help .tiles>ul>li>span:first-child{
+	color: #1A1A1A;
+	font-size: 18px;
+	display: block;
+	background: #E79400;
+	padding: 4px 12px 2px 12px;
+	margin: -8px -8px 6px -8px;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #F7F7F7!important;
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+}
+

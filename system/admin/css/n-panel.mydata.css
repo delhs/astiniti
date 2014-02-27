@@ -1,0 +1,18 @@
+.panel_mydata form{
+	width: 520px;
+}
+
+.panel_mydata form button{
+	float:right;
+}
+
+.panel_mydata form label{
+	float: left;
+	width: 180px;
+	margin-right: 10px;
+}
+
+.panel_mydata form input[type='text'],
+.panel_mydata form input[type='password']{
+	width:296px;
+}

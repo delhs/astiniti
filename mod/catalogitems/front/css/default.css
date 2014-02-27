@@ -1,0 +1,46 @@
+.mod_catalogitems{
+	position:relative;
+}
+
+.mod_catalogitems>h2{
+	font-size: 24px;
+	margin: 0;
+	color:#FFF;
+	padding: 60px 0px 28px 0px;
+}
+
+.mod_catalogitems ul.list_items{
+	position:relative;
+	margin: 0;
+	padding: 15px;
+	list-style: none;
+}
+
+.mod_catalogitems ul.list_items>li{
+	position:relative;
+	float: left;
+	padding: 10px 0;
+	border: 2px solid #BD994C;
+	background:red;
+	width:1000px;
+}
+
+.mod_catalogitems .item-front{
+
+}
+
+.mod_catalogitems .item-right{
+
+}
+
+.mod_catalogitems .item-bottom-one{
+
+}
+
+.mod_catalogitems .item-bottom-two{
+
+}
+
+.mod_catalogitems .item-bottom-three{
+
+}	

@@ -1,0 +1,5 @@
+<?
+$text = ".plug_".$plugName."{
+
+}";
+?>

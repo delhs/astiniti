@@ -1,0 +1,68 @@
+form[name='panel_words']{
+	width: 730px;
+}
+
+form[name='panel_words']>.block>p{
+	display: block;
+	white-space: normal;
+}
+
+form[name='panel_words'].full{
+	width: 975px;
+}
+
+
+
+form[name='panel_words'] span.desc{
+	float:left;
+	width:370px;
+	margin-right:10px;
+	margin-left: 4px;
+}
+
+form[name='panel_words'] span.key{
+	float:left;
+	width:200px;
+	margin-right:10px;
+	margin-left: 14px;
+}
+
+form[name='panel_words'] span.value{
+	float:left;
+	width:300px;
+	margin-left: 14px;
+}
+
+form[name='panel_words'] input[name='word_desc[]']{
+	width: 370px;
+	margin-right: 10px;
+}
+
+form[name='panel_words'] input[name='word_key[]']{
+	width: 200px;
+	margin-right:10px;
+}
+
+form[name='panel_words'] input[name='word_value[]']{
+	width: 300px;
+}
+
+form[name='panel_words'] button{
+	float:right;
+	margin-left: 20px;
+}
+
+form[name='panel_words'] a.del{
+	display: inline-block;*display:inline;*zoom:1;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	margin: 4px 0px 0px 4px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+form[name='panel_words'] a.del:hover{
+	opacity:1;
+}

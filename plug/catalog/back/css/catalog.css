@@ -1,0 +1,1354 @@
+form[name='plug_catalog_add_cat'] button,
+form[name='plug_catalog_edit_cat'] button,
+form[name='plug_catalog_add_brand'] button,
+form[name='plug_catalog_edit_item'] button,
+form[name='plug_catalog_add_item'] button,
+form[name='plug_catalog_edit_brand'] button,
+form[name='item_types'] button,
+form[name='plug_catalog_types_attr'] button,
+form[name='plug_catalog_types_attr_vals'] button{
+	float: right;
+}
+
+
+
+/* categories list */
+.plug_catalog .toolbar a{
+	position: relative;
+	margin-right: 10px;
+	border-bottom: 1px dashed #FFF;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.plug_catalog .toolbar a:hover{
+	border-color:#A3A3A3;
+	color:#A3A3A3;
+}
+
+.plug_catalog .toolbar a:active{
+	border-color:#6B6B6B;
+	color:#6B6B6B;
+}
+
+
+
+.plug_catalog .categories>span:first-child{
+	color: #8F8F8F;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+.plug_catalog .categories ul{
+	position:relative;
+	display: block;
+	margin:0 0 0 10px;
+	padding:0;
+	background: url('/system/admin/img/vline.png') repeat-y;
+	list-style:none;
+	text-align: left;
+}
+
+.plug_catalog .categories li{
+	padding-left: 10px;
+	background: url('/system/admin/img/node.png') no-repeat;
+}
+
+.plug_catalog .categories ul>li:last-child {
+	background: #353535 url('/system/admin/img/lastnode.png') no-repeat;
+}
+
+
+.plug_catalog .categories ul:first-child{
+	margin-left:30px;
+}
+
+.plug_catalog .categories ul li{
+	display: block;
+}
+
+
+.plug_catalog .categories ul li.ui-sortable-helper{
+	padding:4px;
+	border: 1px solid #727272;
+	background: #353535;
+	box-shadow:3px 3px 10px rgba(0,0,0,0.8);
+	opacity:0.5;
+}
+
+.plug_catalog .categories span.hlp{
+	margin: 0px 2px 0px 5px;
+}
+
+.plug_catalog .categories ul li a{
+	color: white;
+	text-decoration:none;
+}
+
+.plug_catalog .categories ul li a.disabled{
+	color:#B42F2F;
+}
+
+.plug_catalog .categories ul li a.hidden{
+	color:#666666;
+}
+
+.plug_catalog .categories ul li a.disabled.hidden{
+	border-bottom:1px dotted #B42F2F;
+	color:#666666;
+}
+
+.plug_catalog .categories ul li a:hover{
+	color: #FFA442;
+	text-decoration:none;
+}
+
+.plug_catalog .categories ul li a.act{
+	color:lime;
+}
+
+.plug_catalog .categories ul li.ui-sortable-helper a{
+	color: white;
+}
+
+
+.plug_catalog .categories ul li.hold{
+	background: #3D3C3C;
+	-webkit-box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+	box-shadow:inset 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+
+.plug_catalog .categories a.node_ctrl{
+	float: left;
+	margin: 4px 4px 0px 0px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -12px -84px;
+	opacity:0.8;
+	cursor:pointer;
+}
+
+.plug_catalog .categories a.node_ctrl.plus{
+	background-position: 0px -84px;
+}
+
+.plug_catalog .categories a.node_ctrl.empty{
+	width:0px;
+	height:0px;
+	background:none;
+}
+
+.plug_catalog .categories ul{
+	display:none;
+}
+
+.plug_catalog .categories a.node_ctrl:hover{
+	opacity:1;
+}
+
+.plug_catalog .categories a.edit{
+	display:inline-block;
+	margin: 4px 5px 0px 4px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -75px -84px;	
+	opacity:0.5;
+	cursor:pointer;*display:inline;*zoom:1;
+}
+
+.plug_catalog .categories a.edit:hover{
+	opacity:1;
+}
+
+.plug_catalog .categories a.add{
+	display:inline-block;
+	margin: 4px 0px 0px 4px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -50px -84px;	
+	opacity:0.5;
+	cursor:pointer;*display:inline;*zoom:1;
+}
+
+.plug_catalog .categories a.add:hover{
+	opacity:1;
+}
+
+.plug_catalog .categories a.delete{
+	display:inline-block;
+	margin: 4px 0px 0px 4px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;	
+	opacity:0.5;
+	cursor:pointer;*display:inline;*zoom:1;
+}
+
+.plug_catalog .categories a.delete:hover{
+	opacity:1;
+}
+/* end categories list */
+
+
+/* brands list */
+.plug_catalog .brands_list .block{
+	min-width:760px;
+	white-space: normal!important;
+}
+
+.plug_catalog .brands_list .block table{
+	min-width:760px;	
+}
+
+.plug_catalog .brands_list .block table thead td{
+	text-align:center;
+}
+
+
+.plug_catalog .brands_list .block table thead td.small{
+	width: 30px;
+	font-size: 10px;
+}
+
+.plug_catalog .brands_list .block table tbody tr{
+	cursor:pointer;
+}
+
+.plug_catalog .brands_list .block table tbody tr.ui-sortable-placeholder{
+	visibility: visible!important;
+	height: 61px;
+	background: #4E4A4A;
+}
+
+.plug_catalog .brands_list .block table tbody tr.ui-sortable-helper{
+	background:#1D1D1D;
+}
+
+.plug_catalog .brands_list .block table tbody tr.ui-sortable-helper td{
+	visibility: hidden;
+}
+
+.plug_catalog .brands_list .block table tbody tr.ui-sortable-helper td:first-child{
+	visibility: visible;
+}
+
+.plug_catalog .brands_list .block table tbody tr.hover{
+	background:#494949;
+}
+
+.plug_catalog .brands_list .block table tbody td>img{
+	display:block;
+	margin:0 auto;
+}
+
+.plug_catalog .brands_list .block table tbody td .no_photo{
+	margin:0 auto;
+	width:100px;
+	height:50px;
+	background:#292929;
+}
+
+.plug_catalog .brands_list .block span.checkicon{
+	display:block;
+	margin:0 auto;
+	width:16px;
+	height:13px;
+	background:url('/system/admin/img/icons.png') no-repeat -64px -21px; 
+	opacity:0.1;
+}
+
+
+.plug_catalog .brands_list .block span.icon{
+	display:block;
+	margin:0 auto;
+	width:16px;
+	height:13px;
+	background:url('/system/admin/img/icons.png') no-repeat -64px -21px; 
+	opacity:0.6;
+}
+
+.plug_catalog .brands_list .block span.icon.reddelete{
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.plug_catalog .brands_list .block span.icon.hover{
+	margin-top: -3px;
+	opacity: 1;
+}
+
+.plug_catalog .brands_list .block span.icon.redcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -16px -21px; 
+}
+
+.plug_catalog .brands_list .block span.icon.greencheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat 0 -21px; 
+}
+
+.plug_catalog .brands_list .block span.icon.yellowcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.plug_catalog .brands_list .block span.icon.reddelete.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.plug_catalog .brands_list .block span.gray{
+	color: #616161;
+}
+/* end brands list */
+
+
+/* items list */
+
+.plug_catalog .items_list .filter_checkboxes label{
+	display: inline-block;
+	float: none;
+	width: auto;
+	cursor:pointer;
+}
+
+.plug_catalog .items_list .filter_checkboxes .jq-radio,
+.plug_catalog .items_list .filter_checkboxes .jq-checkbox{
+	margin-top: 0px;
+	margin-right: 55px;
+	margin-left: 6px;
+}
+
+.plug_catalog .items_list .block{
+	min-width:1080px;
+	white-space: normal!important;
+}
+
+.plug_catalog .items_list .block table{
+	min-width:1080px;	
+}
+
+.plug_catalog .items_list .block table tbody tr{
+	cursor:pointer;
+}
+
+.plug_catalog .items_list .block table thead td{
+	text-align:center;
+}
+
+.plug_catalog .items_list .block table thead td.small{
+	width: 30px;
+	font-size: 10px;
+}
+
+.plug_catalog .items_list .block table tbody tr.hover{
+	background:#494949;
+}
+
+
+.plug_catalog .items_list .block table tbody td>img{
+	display:block;
+	margin:0 auto;
+}
+
+.plug_catalog .items_list .block table tbody td .no_photo{
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	background: #292929;
+}
+
+.plug_catalog .items_list .block span.icon{
+	display:block;
+	margin:0 auto;
+	width:16px;
+	height:13px;
+	background:url('/system/admin/img/icons.png') no-repeat -64px -21px; 
+	opacity:0.6;
+}
+
+.plug_catalog .items_list .block span.icon.reddelete{
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.plug_catalog .items_list .block span.icon.hover{
+	margin-top: -3px;
+	opacity: 1;
+}
+
+.plug_catalog .items_list .block span.icon.redcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -16px -21px; 
+}
+
+.plug_catalog .items_list .block span.icon.greencheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat 0 -21px; 
+}
+
+.plug_catalog .items_list .block span.icon.yellowcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.plug_catalog .items_list .block span.icon.reddelete.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.plug_catalog .items_list .block span.gray{
+	color: #616161;
+}
+
+
+/* end items list */
+
+/* item edit */
+.plug_catalog .edit_item{
+	min-width:1000px;
+}
+
+.plug_catalog.categories .block.categories{
+	text-align: left;
+}
+
+.plug_catalog.categories .block.categories ul li a{
+	color:#BBA962;
+}
+
+.plug_catalog.categories .block.categories ul li a:hover{
+	color:#CF904C;
+}
+
+.plug_catalog.categories .block.categories ul.items {
+	display: block;
+}
+
+.plug_catalog.categories .block.categories ul.items a{
+	color: #FFF;
+	font-size: 14px;
+}
+
+.plug_catalog.categories .block.categories ul.items a:hover{
+	color: #C4C4C4;
+}
+
+.plug_catalog.categories .block.categories ul.items a.selected,
+.plug_catalog.categories .block.categories ul.items a.selected:hover{
+	color: red;
+}
+
+.plug_catalog.categories .block.categories b.empty{
+    display: block;
+    margin-left: 4px;
+    color: #888;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.plug_catalog.categories button[name='analogsSave']{
+	float:right;
+}
+
+
+.plug_catalog .edit_item .item_logo{
+	margin:0 auto;
+	width:800px;
+}
+
+.plug_catalog .edit_item textarea[name='item_desc']{
+	width:100%;
+	height:500px;
+}
+
+.plug_catalog .edit_item .item_logo.exist{
+	margin:0 auto;
+	width:800px;
+}
+
+.plug_catalog .edit_item #item_logo-styler{
+	display: block!important;
+	margin: 20px auto;
+	width: 264px;
+}
+
+.plug_catalog .edit_item button[name='removeItemLogo']{
+	display: block;
+	float:none;
+	margin: 14px auto;
+}
+
+.plug_catalog .edit_item button[name='removeItemLogo'].hidden{
+	display:none;
+}
+
+.plug_catalog .edit_item .field.inf label{
+	margin-top: -8px;
+	color: #73777A;
+}
+
+.plug_catalog .edit_item .field.inf span{
+	color: #73777A;
+}
+
+
+.plug_catalog .edit_item textarea[name='item_quick_desc'] {
+	width: 100%;
+	height: 100px;
+	resize: none;
+}
+
+.plug_catalog .edit_item input[name='create_date_time']{
+	width:130px;
+}
+
+
+.plug_catalog .edit_item .CodeMirror.cm-s-default {
+	height: 443px;
+}
+
+.plug_catalog .edit_item  ul.raiting {
+	float: left;
+	margin: 8px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.plug_catalog .edit_item  ul.raiting li{
+	float:left;
+	margin:0;
+	padding: 0 6px 0 0;	
+	width:16px;
+	height:16px;
+	cursor:pointer;
+}
+
+.plug_catalog .edit_item  ul.raiting li a{
+	float:left;	
+	width:16px;
+	height:16px;	
+	background:url(/system/admin/img/icons.png) -64px -47px;
+}
+
+.plug_catalog .edit_item  ul.raiting li.set a{
+	background:url(/system/admin/img/icons.png) -32px -47px;
+}
+
+.plug_catalog .edit_item  ul.raiting li.set.on.hover a{
+	background:url(/system/admin/img/icons.png) -16px -47px;
+}
+
+.plug_catalog .edit_item  ul.raiting li.hover.on a{
+	background: url(/system/admin/img/icons.png) -16px -47px;
+}
+
+.plug_catalog .edit_item a.raitingnull{
+	float:left;	
+	margin: 8px 16px 0 0;	
+	width:16px;
+	height:16px;
+	background:url(/system/admin/img/icons.png) -64px -47px;
+}
+
+.plug_catalog .edit_item a.raitingnull:hover{
+	background:url(/system/admin/img/icons.png) -48px -47px;
+}
+
+.plug_catalog .edit_item .item_other_images{
+	position:relative;
+	overflow:hidden;
+	margin-bottom: 35px;
+	width:100%;
+}
+
+.plug_catalog .edit_item .item_other_images>div{
+	position: relative;
+	float: left;
+	margin:4px;
+	height:204px;
+}
+
+.plug_catalog .edit_item .item_other_images>div>img{
+	margin:4px;
+	height:200px;
+	border:1px solid black;
+	/* cursor:move; */
+}
+
+.plug_catalog .item_other_images a.remove_other_image{
+	position:absolute;
+	top: 9px;
+	right: 9px;
+	display:block;
+	width: 16px;
+	height: 13px;
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.plug_catalog .edit_item .attributes input[type='text']{
+	width:200px;
+}
+
+.plug_catalog .edit_item ul.analogs,
+.plug_catalog .edit_item ul.accompanying{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.plug_catalog .edit_item ul.analogs li,
+.plug_catalog .edit_item ul.accompanying li{
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+.plug_catalog .edit_item ul.analogs li a[item-id],
+.plug_catalog .edit_item ul.accompanying li a[item-id]{
+	display: inline-block;
+	margin: 4px 0px;
+	padding: 2px 12px;
+	background: none;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.plug_catalog .edit_item ul.analogs li a[item-id]:hover,
+.plug_catalog .edit_item ul.accompanying li a[item-id]:hover{
+	background: #2B2B2B;
+}
+
+.plug_catalog .edit_item ul.analogs li a.delete,
+.plug_catalog .edit_item ul.accompanying li a.delete{
+	position: relative;
+	display: inline-block;
+	margin-left: 8px;
+	width: 16px;
+	height: 14px;
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+	opacity: 0.8;
+}
+
+.plug_catalog .edit_item ul.analogs li a.delete:hover,
+.plug_catalog .edit_item ul.accompanying li a.delete:hover{
+	opacity:1;
+}
+
+
+
+
+
+.plug_catalog .edit_item ul.comments_list{
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-shadow: none;
+}
+
+.plug_catalog .edit_item .comments_list ul.comments_list>li{
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.plug_catalog .edit_item .comments_list .reply ul.comments_list>li{
+	width:auto;
+	margin: 0 16px;
+}
+
+.plug_catalog .edit_item .comments_list .comment{
+	margin: 8px 0;
+	overflow: hidden;
+}
+
+.plug_catalog .edit_item .comments_list .reply .comment{
+	padding: 0;
+	margin: 14px 0;
+}
+
+.plug_catalog .edit_item .comments_list .comment_inner{
+	display: block;
+	background: #FFF;
+	padding: 10px;
+}
+
+.plug_catalog .edit_item .comments_list .reply .comment_inner{
+	background: #DAEFFF;
+}
+
+.plug_catalog .edit_item .comments_list .info{
+	width: 175px;
+	float: left;
+	overflow: hidden;
+	word-break: break-word;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar{
+	background: #333;
+	border: 2px dashed #DD4104;
+	margin-bottom: 20px;
+	padding: 10px 8px;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar label{
+	float:none;
+	width:auto;
+	line-height: initial;
+	cursor:pointer;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar a{
+	float:none;
+	width:auto;
+	line-height: initial;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar .jq-checkbox{
+	margin-top: -6px;
+	margin-right: 6px;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar .tool{
+	float:left;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar .tool .icon{
+	float: left;
+	margin-left: 20px;
+	cursor:pointer;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar .tool .icon.edit{
+	background-position:-25px 0;
+}
+
+.plug_catalog .edit_item .comments_list .toolbar .tool .icon.ireply{
+	background-position: -50px 0;
+}
+
+.plug_catalog .edit_item .comments_list .username{
+	display: block;
+	font-size: 14px;
+	font-weight:bold;
+	position:relative;
+	color:#202020;
+}
+
+.plug_catalog .edit_item .comments_list .username:after{
+	position:absolute;
+	content:":";
+}
+
+.plug_catalog .edit_item .comments_list .date{
+	display: block;
+	margin-top: 8px;
+	font-size: 12px;
+	color: inherit;
+	text-transform: lowercase;
+	color: #000;
+}
+
+.plug_catalog .edit_item .comments_list .text{
+	display: block;
+	margin-left: 190px;
+	color: #000;
+	white-space: normal;
+}
+
+.plug_catalog .edit_item .comments_list .text .replace_comment_mess{
+	background: #FFF7F7;
+	padding: 3px 13px;
+	color: #FC2E2E;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.plug_catalog .edit_item .comments_list a.reply_to{
+	float:right;
+}
+
+
+
+.catalog_item_page .comments_list .text{
+	display: block;
+	margin-left: 190px;
+	color: #1B1B1B;
+}
+
+.plug_catalog .edit_item .comments_list .text b,
+.plug_catalog .edit_item .comments_list .text strong,
+.plug_catalog .edit_item .comments_list .text i,
+.plug_catalog .edit_item .comments_list .text h1,
+.plug_catalog .edit_item .comments_list .text h2,
+.plug_catalog .edit_item .comments_list .text h3,
+.plug_catalog .edit_item .comments_list .text h4{
+	color: #1B1B1B;
+}
+
+.plug_catalog .edit_item .comments_list .text a{
+	color: #1B1B1B;
+	border-bottom: 1px dashed #1B1B1B;
+	text-decoration: none;
+}
+
+
+/*splash edit comment*/
+.splash_splash.catalog_edit_comment_form{
+	text-shadow:none;
+	text-align: left;
+}
+
+.splash_splash.catalog_edit_comment_form label{
+	width: 100px;
+}
+
+.splash_splash.catalog_edit_comment_form .field>div.padding {
+	padding-left: 100px;
+	padding-right: 10px;
+}
+
+.splash_splash.catalog_edit_comment_form .field.editorblock{
+	width:530px;
+	height:280px;
+	color:black;
+	white-space:normal;
+}
+
+.splash_splash.catalog_edit_comment_form textarea[name='comment_text']{
+	height:200px;
+	resize:none;
+}
+
+.splash_splash.catalog_edit_comment_form button[name='saveEdited']{
+	float:right;
+}
+/*END splash edit comment*/
+
+/*splash reply comment*/
+.splash_splash.catalog_reply_comment_form{
+	text-shadow:none;
+	text-align: left;
+}
+
+.splash_splash.catalog_reply_comment_form label{
+	width: 100px;
+}
+
+.splash_splash.catalog_reply_comment_form .field>div.padding {
+	padding-left: 100px;
+	padding-right: 10px;
+}
+
+.splash_splash.catalog_reply_comment_form .field.editorblock{
+	width:530px;
+	height:280px;
+	color:black;
+	white-space:normal;
+}
+
+.splash_splash.catalog_reply_comment_form textarea[name='comment_text']{
+	height:200px;
+	resize:none;
+}
+
+.splash_splash.catalog_reply_comment_form button[name='saveEdited']{
+	float:right;
+}
+/*END splash reply comment*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end item edit */
+
+/* brand edit */
+.plug_catalog form[name='edit_brand'] .field.inf label{
+	margin-top: -8px;
+	color: #73777A;
+}
+
+.plug_catalog form[name='edit_brand'] .field.inf span{
+	color: #73777A;
+}
+
+
+.plug_catalog form[name='edit_brand'] button[name='saveEditedBrand']{
+	float:right;
+}
+
+.plug_catalog form[name='edit_brand'] textarea[name='brand_quick_desc']{
+	width:100%;
+	height:100px;
+	resize: none;
+}
+
+.plug_catalog form[name='edit_brand'] textarea[name='brand_descr']{
+	height:500px;
+}
+
+
+
+.plug_catalog form[name='edit_brand'] .CodeMirror.cm-s-default{
+	height:443px;
+}
+
+.plug_catalog form[name='edit_brand'] .brand_logo{
+	margin:0 auto;
+	width:400px;
+}
+
+.plug_catalog form[name='edit_brand'] .brand_logo.exist{
+	margin:0 auto;
+	width:400px;
+}
+
+.plug_catalog form[name='edit_brand'] #brand_logo-styler{
+	display: block!important;
+	margin: 20px auto;
+	width: 264px;
+}
+
+.plug_catalog form[name='edit_brand'] button[name='removeBrandLogo']{
+	display: block;
+	margin: 14px auto;
+}
+
+.plug_catalog form[name='edit_brand'] button[name='removeBrandLogo'].hidden{
+	display:none;
+}
+/* end brand edit */
+
+/* item types */
+.plug_catalog .items_types{
+	min-width: 500px;
+}
+
+.plug_catalog form[name='item_types'] .field .nopadding{
+	padding: 0px 55px 0px 0px;
+}
+
+.plug_catalog form[name='item_types'] .field a.delete{
+	display: inline-block;
+	margin: 4px 0px 0px 20px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.plug_catalog form[name='item_types'] .field a.delete:hover{
+	opacity:1;
+}
+
+.plug_catalog form[name='item_types'] button[name='save']{
+	margin-left:20px;
+}
+
+
+/* END item types */
+
+
+/* types attributes */
+.plug_catalog .catalog_types_attr{
+	min-width: 800px;
+}
+
+.plug_catalog .catalog_types_attr table span.jq-checkbox{
+	margin-top: -3px;
+}
+
+.plug_catalog .catalog_types_attr table input[type='text']{
+	width:98%;
+}
+
+.plug_catalog .catalog_types_attr table td.small{
+	width: 30px;
+	font-size: 10px;
+}
+
+.plug_catalog .catalog_types_attr table span.icon{
+	display: block;
+	margin: 0 auto;
+	width: 16px;
+	height: 13px;
+	background: url('/system/admin/img/icons.png') no-repeat -64px -21px;
+	opacity: 0.6;
+}
+
+
+.plug_catalog .catalog_types_attr table tbody td.hover span.icon{
+	margin-top: -3px;
+	opacity: 1;
+}
+
+.plug_catalog .catalog_types_attr table tbody td.in_list,
+.plug_catalog .catalog_types_attr table tbody td.in_filter,
+.plug_catalog .catalog_types_attr table tbody td.delete{
+	cursor:pointer;
+}
+
+.plug_catalog .catalog_types_attr table span.icon.greencheck.on {
+	background: url('/system/admin/img/icons.png') no-repeat 0 -21px;
+}
+
+.plug_catalog .catalog_types_attr table span.icon.yellowcheck.on {
+	background: url('/system/admin/img/icons.png') no-repeat -32px -21px;
+}
+
+.plug_catalog .catalog_types_attr table span.icon.reddelete{
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.plug_catalog .catalog_types_attr  button[name='save_type']{
+	margin-left:20px;
+}
+
+/* END types attributes */
+.plug_catalog .types_attr_vals{
+	min-width:680px;
+}
+
+.plug_catalog .types_attr_vals .field .nopadding {
+	padding: 0px 55px 0px 0px;
+}
+
+.plug_catalog .types_attr_vals .field a.delete {
+	display: inline-block;
+	margin: 4px 0px 0px 20px;
+	width: 12px;
+	height: 12px;
+	background: url('/system/admin/img/icons.png');
+	background-position: -62px -84px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.plug_catalog .types_attr_vals .field a.delete:hover{
+	opacity:1;
+}
+
+.plug_catalog .types_attr_vals button[name='save_attr_vals']{
+	margin-left:20px;
+}
+
+.plug_catalog .import .hide{
+	display:none;
+}
+
+/* orders list */
+.orders_list tbody tr{
+	cursor:pointer;
+}
+
+.orders_list tbody tr:hover{
+	background: #2B2B2B;
+}
+
+.orders_list tbody span.order_time{
+	color: #ACACAC;
+	text-shadow: none;
+}
+
+.orders_list .status_0{
+	color: #FF6464;
+}
+
+.orders_list .status_1{
+	color: #90CEFF;
+}
+
+.orders_list .status_2{
+	color: #F8F800;
+}
+
+.orders_list .status_3{
+	color: #00C6F8;
+}
+
+.orders_list .status_4{
+	color: #8EFD43;
+}
+
+.orders_list .status_5{
+	color: #A9FF59;
+}
+
+.orders_list .status_6{
+	color: #F00;
+}
+
+.orders_list .status_7{
+	color: #9C9C9C;
+}
+
+.orders_list td.remove{
+	width:20px;
+}
+
+.orders_list td.remove span.icon.reddelete,
+.orders_list td.remove span.icon.reddelete:hover,
+.orders_list td.remove span.icon.reddelete:active{
+	width: 14px;
+	height: 14px;
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+	opacity: 0.7;
+}
+
+.splash_splash .order_details.form{
+	margin: 0;
+	text-align:left;
+}
+
+.splash_splash .order_details.form .block{
+	width: 560px;
+	white-space:normal;
+}
+
+.splash_splash .order_details.form textarea[name='comment']{
+	display: block;
+	margin: 2px;
+	width: 546px;
+	height: 86px;
+	resize: none;
+}
+
+.splash_splash .order_details.form textarea[name='manager_comment']{
+	display: block;
+	margin: 2px;
+	width: 546px;
+	height: 86px;
+	resize: none;
+}
+
+.splash_splash .order_details.form span.order_time{
+	color: #ACACAC;
+	text-shadow: none;
+}
+
+.splash_splash .order_details.form .field>i{
+	display: inline-block;
+	overflow: hidden;
+	margin-top: 6px;
+	width: 250px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-style: normal;
+}
+
+.splash_splash .order_details.form .field .jq-checkbox{
+	margin-top: -2px;
+}
+
+.splash_splash .order_details.form button[name='save_order_details']{
+	float:right;
+}
+
+.splash_splash form[name='order_user_data'] .field>label{
+	width:150px;
+}
+
+.splash_splash form[name='order_user_data'] .field>div.padding{
+	padding-left:170px;
+}
+
+.splash_splash form[name='order_user_data'] input[type='text']{
+	width: 350px;
+}
+
+.splash_splash form[name='order_user_data'] button[name='save_user_data']{
+	float:right;
+}
+
+.splash_splash form[name='order_user_data']{
+	margin: 0;
+	text-align:left;
+}
+
+.splash_splash form[name='order_user_data'] .jq-selectbox.updated:after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -11px;
+	width: 22px;
+	height: 22px;
+	background: url(/plug/catalog/back/img/loader_22.gif);
+	content: "";
+}
+
+.splash_splash form[name='order_user_data'] .field.address{
+	margin:20px 0 20px -12px;
+}
+
+.splash_splash form[name='order_user_data'] .field.address input[type='text']{
+	width:30px;
+	text-align: center;
+}
+
+.splash_splash form[name='order_user_data'] .field.address label{
+	float: none;
+	margin: 0px 2px 0px 13px;
+	width: auto;
+}
+
+.splash_splash .order_items table .no_photo {
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	background: #292929;
+}
+
+.splash_splash .order_items table img.photo {
+	display:block;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+}
+
+.splash_splash .order_items{
+	text-align:left;
+}
+
+.splash_splash.order_items_splash{
+	overflow-y:auto;
+}
+/* END orders list */
+
+
+/* orders list add item to order */
+.splash_splash.add_items_to_order{
+	overflow-y:auto;
+}
+
+.splash_splash.add_items_to_order{
+
+}
+
+.splash_splash.add_items_to_order table tbody td>img{
+	display:block;
+	margin:0 auto;
+}
+
+.splash_splash.add_items_to_order table tbody td .no_photo{
+	margin:0 auto;
+	width:100px;
+	height:50px;
+	background:#292929;
+}
+
+.splash_splash.add_items_to_order .filter{
+	display:none;
+}
+
+
+.splash_splash.add_items_to_order span.icon{
+	display:block;
+	margin:0 auto;
+	width:16px;
+	height:13px;
+	background:url('/system/admin/img/icons.png') no-repeat -64px -21px; 
+	opacity:0.6;
+}
+
+.splash_splash.add_items_to_order span.icon.reddelete{
+	background: url('/system/admin/img/icons.png') no-repeat -16px -34px;
+}
+
+.splash_splash.add_items_to_order span.icon.hover{
+	margin-top: -3px;
+	opacity: 1;
+}
+
+.splash_splash.add_items_to_order span.icon.redcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -16px -21px; 
+}
+
+.splash_splash.add_items_to_order span.icon.greencheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat 0 -21px; 
+}
+
+.splash_splash.add_items_to_order span.icon.yellowcheck.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.splash_splash.add_items_to_order span.icon.reddelete.on{
+	background:url('/system/admin/img/icons.png') no-repeat -32px -21px; 
+}
+
+.splash_splash.add_items_to_order span.gray{
+	color: #616161;
+}
+/* orders list add item to order */
+
+/*catalog settings*/
+form[name='catalog_settings_main'] button[name='save_settings']{
+	float:right;
+}
+
+form[name='catalog_settings_templates'] button[name='save_settings_templates']{
+	float:right;
+}
+
+form[name='catalog_settings_templates'] textarea[name='order_email_template']{
+	height:400px;
+}
+
+form[name='catalog_settings_client_templates'] button[name='save_settings_client_templates']{
+	float:right;
+}
+
+form[name='catalog_settings_client_templates'] textarea[name='client_email_template']{
+	height:400px;
+}
+
+form[name='catalog_settings_oferta'] button[name='save_oferta_settings']{
+	float:right;
+}
+
+form[name='catalog_settings_oferta'] textarea[name='oferta_html']{
+	height:400px;
+}
+/*ENDcatalog settings*/
+
+
+/*edit categorie*/
+form[name='plug_catalog_edit_cat'] .cat_logo{
+	margin:0 auto;
+	width:400px;
+}
+
+form[name='plug_catalog_edit_cat'] .cat_logo.exist{
+	margin:0 auto;
+	width:400px;
+}
+
+form[name='plug_catalog_edit_cat'] #cat_logo-styler{
+	display: block!important;
+	margin: 20px auto;
+	width: 264px;
+}
+
+form[name='plug_catalog_edit_cat'] button[name='removeCatLogo']{
+	display: block;
+	margin: 14px auto;
+	float:none;
+}
+
+form[name='plug_catalog_edit_cat'] button[name='removeCatLogo'].hidden{
+	display:none;
+}
+/*END edit categorie*/

@@ -1,0 +1,79 @@
+.redactor_editor,
+.redactor_editor:focus {
+	background: white;
+	color: initial;
+	font-size: initial;
+	text-shadow: initial;
+	font-style: initial;
+	font-family: initial;
+	font-weight: initial;
+	text-decoration: initial;
+	text-overflow: initial;
+	overflow: initial;
+	border: initial;
+	margin: initial;
+	padding: initial;	
+}
+
+
+
+.redactor_editor p,
+.redactor_editor span,
+.redactor_editor a,
+.redactor_editor div,
+.redactor_editor h1,
+.redactor_editor h2,
+.redactor_editor h3,
+.redactor_editor h4,
+.redactor_editor{
+	color: initial;
+	font-size: initial;
+	text-shadow: initial;
+	font-style: initial;
+	font-family: initial;
+	font-weight: initial;
+	text-decoration: initial;
+	text-overflow: initial;
+	overflow: initial;
+	border: initial;
+	margin: initial;
+	padding: initial;
+	background: initial;
+}
+
+.redactor_editor p p,
+.redactor_editor div div,
+.redactor_editor a a,
+.redactor_editor span span{
+	color: inherit;
+	font-size: inherit;
+	text-shadow: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	text-decoration: inherit;
+	text-overflow: inherit;
+	overflow: inherit;
+	border: inherit;
+	margin: inherit;
+	padding: inherit;
+	background: inherit;
+}
+
+.redactor-imagebox-edit{
+	padding: 0px !important;
+	margin: 0px !important;
+	padding:initial!important;
+	border:none!important;
+}
+
+.redactor-imagebox-edit div{
+	padding:initial!important;
+	border:none!important;
+}
+
+.redactor_editor a{
+	padding:0;
+}
+
+padding: initial!important;

@@ -1,0 +1,37 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+<!-- jQuery, jQueryUI --> 	
+<link rel="stylesheet" type="text/css" href="/system/admin/editor/css/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="/system/admin/editor/css/elfinder.min.css"/>
+<link rel="stylesheet" type="text/css" href="/system/admin/editor/css/elfinder.theme.css"/>
+
+ 
+<script type="text/javascript" src="/system/admin/js/a-jquery.1.10.2.js" charset="utf-8"></script>
+<script type="text/javascript" src="/system/admin/editor/js/a-jquery-ui.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/system/admin/editor/js/c-elfinder.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/system/admin/editor/js/q-jquery.fix.addon.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+$().ready(function() {
+ 
+    var funcNum = window.location.search.replace(/^.*CKEditorFuncNum=(\d+).*$/, "$1");
+    var langCode = window.location.search.replace(/^.*langCode=([a-z]{2}).*$/, "$1");
+ 
+	$('#elfinder').elfinder({
+		url : '/system/admin/editor/php/connector.files.php',
+		lang : 'ru',
+		getFileCallback:function(file){
+			window.opener.CKEDITOR.tools.callFunction(funcNum, file);
+			window.close();
+		}
+	});
+
+});
+	</script>
+</head>
+<body>
+	<div id="elfinder" class="static fullscreen"></div>
+</body>
+
+

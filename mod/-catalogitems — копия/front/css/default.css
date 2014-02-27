@@ -1,0 +1,339 @@
+.mod_catalogitems{
+	background:#4D7FBC;
+	padding: 0px 110px;
+	border-bottom: 4px solid #000;	
+	position:relative;
+}
+
+.mod_catalogitems>h2{
+	font-size: 24px;
+	margin: 0;
+	color:#FFF;
+	padding: 60px 0px 28px 0px;
+}
+
+.mod_catalogitems ul.list_items{
+	position:relative;
+	margin: 0;
+	padding: 15px;
+	list-style: none;
+}
+
+.mod_catalogitems ul.list_items>li{
+	position:relative;
+	float: left;
+	margin:0 20px;
+	/*margin: 0px 5%;*/
+	padding: 10px 0;
+	border: 2px solid #BD994C;
+	background:#FFF;
+	width:210px;
+	margin-bottom: 80px;
+}
+
+.mod_catalogitems ul.list_items>li:first-child{
+	border-top: 0;
+}
+
+.mod_catalogitems ul.list_items>li .percent{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2px 5px;
+	border: 2px solid #FFFB96;
+	border-radius: 5px;
+	background: #F87700;
+	-webkit-box-shadow: 0px 0px 4px #F7C04C;
+	-moz-box-shadow: 0px 0px 4px #F7C04C;
+	box-shadow: 0px 0px 4px #F7C04C;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+.mod_catalogitems ul.list_items>li>div{
+	float:left;
+}
+
+.mod_catalogitems .list_items>p{
+	margin: 0;
+	color: #CFCFCF;
+	font-style: italic;
+	font-size: 16px;
+}
+
+
+.mod_catalogitems .list_items a.add_to_compare{
+	position: relative;
+	margin-left: 12px;
+	color: #0166AA;
+}
+
+.mod_catalogitems .list_items a.add_to_compare:hover{
+	color: #09F;
+}
+
+.catalog_main_page .list_items a.add_to_compare:active{
+	color: #35607C;
+}
+
+.mod_catalogitems .list_items a.del_from_compare{
+	position: relative;
+	margin-left: 12px;
+	color: #45AA01;
+}
+
+.mod_catalogitems .list_items a.del_from_compare:hover{
+	color: #327C00;
+}
+
+.mod_catalogitems .list_items a.del_from_compare:active{
+	color: #1B4101;
+}
+
+.mod_catalogitems ul.list_items>li>a.item_logo{
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+}
+
+.mod_catalogitems ul.list_items>li>a.item_logo>img{
+	width: 198px;
+	height: 198px;
+}
+
+.mod_catalogitems ul.list_items>li .percent{
+	top: 170px;
+	left: 142px;
+	font-size: 16px;
+}
+
+.mod_catalogitems ul.list_items>li>a.item_logo .no_photo{
+	position: absolute;
+	top: 70px;
+	left: 70px;
+	width: 66px;
+	height: 66px;
+	background: url('/plug/catalog/front/img/icons.png');
+	background-position: -27px 0;
+}
+
+.mod_catalogitems ul.list_items>li .buyblock{
+	position: relative;
+	width: 210px;
+}
+
+.mod_catalogitems ul.list_items>li a.add_to_compare,
+.mod_catalogitems ul.list_items>li a.del_from_compare{
+	display: block;
+	text-align: center;
+}
+
+.mod_catalogitems ul.list_items>li a.del_from_compare{
+	display:none;
+}
+
+.mod_catalogitems ul.list_items>li .not_in_stock{
+	position: absolute;
+	top: -3px;
+	right: 12px;
+	width: 185px;
+	color: #DB7979;
+	text-align: center;
+	font-size: 12px;
+}
+
+.mod_catalogitems ul.list_items>li .description a.item_name {
+	display: block;
+	margin: 10px auto;
+	width: 185px;
+	text-align: center;
+	font-size: 16px;
+	height: 38px;
+	overflow: hidden;
+}
+
+.mod_catalogitems ul.list_items>li .description{
+	float: none;
+	margin: 0 auto;
+	width: 185px;
+}
+
+.mod_catalogitems ul.list_items>li .description .desc{
+	display:none;
+}
+
+.mod_catalogitems ul.list_items>li ul.attributes{
+	display: block;
+	float: left;
+	margin: 5px 0px 10px 0px;
+	padding: 0;
+	list-style: none;
+}
+
+.mod_catalogitems ul.list_items>li ul.attributes span{
+	float: left;
+	overflow: hidden;
+	width: 120px;
+	color: #000;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.mod_catalogitems ul.list_items>li ul.attributes b{
+	float: left;
+	overflow: hidden;
+	width: 65px;
+	color: #000;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.mod_catalogitems ul.list_items>li span.desc{
+	display: block;
+	margin-bottom: 10px;
+	min-height: 50px;
+}
+
+.mod_catalogitems ul.list_items>li a.category,
+.mod_catalogitems ul.list_items>li a.brand{
+	display: block;
+	overflow: hidden;
+	width: 185px;
+	height: 18px;
+	color: #999;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.mod_catalogitems ul.list_items>li a.brand{
+	color:#299C5C;
+}
+
+.mod_catalogitems .prev{
+	display: block;
+	width: 0;
+	height: 0;
+	border-right: 50px solid rgba(0, 0, 0, 0.45);
+	border-top: 100px solid rgba(0, 0, 0, 0);
+	border-bottom: 100px solid rgba(20, 0, 0, 0);
+	position: absolute;
+	top: 50%;
+	left:80px;
+	margin-top: -75px;
+}
+
+.mod_catalogitems .next{
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 50px solid rgba(0, 0, 0, 0.45);
+	border-top: 100px solid rgba(0, 0, 0, 0);
+	border-bottom: 100px solid rgba(20, 0, 0, 0);
+	position: absolute;
+	top: 50%;
+	right: 80px;
+	margin-top: -75px;
+}
+
+.mod_catalogitems .pager{
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	display: block;
+}
+
+.mod_catalogitems .controls{
+	opacity:0;
+}
+
+.mod_catalogitems .pager>div{
+	position: relative;
+	left: -50%;
+	height: 20px;
+}
+
+.mod_catalogitems .pager a { 
+	width:21px;
+	height:21px;
+	background: url('/mod/catalogitems/front/img/bullet.png') left top;
+	float: left; 
+	text-indent: -4000px; 
+	position:relative;
+	margin-left:7px;
+	color:transparent;
+}
+
+.mod_catalogitems .pager a:hover{
+	background-position: 0 50%;
+}
+
+.mod_catalogitems .pager a.selected{
+	background-position: 0 100%;
+}
+
+.mod_catalogitems .pager a>span{
+	display:none;
+}	
+
+@media screen and (max-width: 1260px){
+	.mod_catalogitems{
+		padding: 0px 55px;
+	}
+	.mod_catalogitems .prev{
+		left:25px;
+	}
+	.mod_catalogitems .next{
+		right:25px;
+	}
+}
+
+@media screen and (max-width: 1150px){
+	.mod_catalogitems{
+		padding: 0px 20px;
+	}
+	.mod_catalogitems .prev{
+		left:0;
+	}
+	.mod_catalogitems .next{
+		right:0;
+	}
+}
+
+@media screen and (max-width: 1080px){
+	.mod_catalogitems{
+		padding: 0px 10px;
+	}
+	.mod_catalogitems .prev{
+		left:0;
+	}
+	.mod_catalogitems .next{
+		right:0;
+	}
+}
+/*
+@media screen and (max-width: 1755px){
+	.mod_catalogitems ul.list_items>li{
+		margin: 0px 3%;
+	}
+}
+
+@media screen and (max-width: 1435px){
+	.mod_catalogitems ul.list_items>li{
+		margin: 0px 2%;
+	}
+}
+
+@media screen and (max-width: 1320px){
+	.mod_catalogitems ul.list_items>li{
+		margin: 0px 1%;
+	}
+}*/

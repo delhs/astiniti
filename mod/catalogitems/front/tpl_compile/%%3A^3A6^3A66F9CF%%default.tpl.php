@@ -1,0 +1,5 @@
+<?php /* Smarty version 2.6.27, created on 2014-02-13 18:35:21
+         compiled from default.tpl */ ?>
+<?php echo ''; ?><?php if (isset ( $this->_tpl_vars['itemsArray'] )): ?><?php echo '<div class="mod_catalogitems"><h2>Заголовок</h2><ul class="list_items">'; ?><?php $_from = $this->_tpl_vars['itemsArray']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['item']):
+?><?php echo '<li><div class="item-front"></div><div class="item-right"></div><div class="item-bottom-one"></div><div class="item-bottom-two"></div><div class="item-bottom-three"></div></li>'; ?><?php endforeach; endif; unset($_from); ?><?php echo '</ul><a class="prev controls" href="#"></a><a class="next controls" href="#"></a><div class="pager controls"><div></div></div><div class="clear"></div></div>'; ?><?php endif; ?><?php echo ''; ?>
