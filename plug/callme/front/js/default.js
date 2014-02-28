@@ -3,6 +3,7 @@ var plug_callme = {
 	init:function(){
 		var elements = document.querySelectorAll("a.callme");
 		Array.prototype.forEach.call(elements, function(el, i){
+<<<<<<< HEAD
 			if( el.addEventListener ){
 				el.addEventListener('click', function(e){
 					e.preventDefault();
@@ -15,6 +16,12 @@ var plug_callme = {
 				});
 			}
 
+=======
+			el.addEventListener('click', function(e){
+				e.preventDefault();
+				plug_callme.showForm();
+			}, false);
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 		});
 	},
 	showForm:function(){

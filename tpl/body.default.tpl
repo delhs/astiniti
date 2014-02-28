@@ -1,5 +1,8 @@
 {strip}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 <div class="page-wrapper">
 	<div class="page-buffer">
 		<!--cap block-->

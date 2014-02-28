@@ -29,10 +29,17 @@ if(!Number.prototype.toRad)Number.prototype.toRad=function(){return(this*Math.PI
 //convert rad to angle
 if(!Number.prototype.toAngle)Number.prototype.toAngle=function(){ return Math.ceil((this*180)/Math.PI);};
 
+<<<<<<< HEAD
 var core = {
 	
 	init:function(){
 
+=======
+
+var core = {
+	
+	init:function(){
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 		//browser detect
 		this.browser.detect();
 
@@ -296,6 +303,7 @@ var core = {
 	/* confirmation dialog box */
 	confirmBox:function( confirmMessage, yesCallback, noCallback ){
 
+<<<<<<< HEAD
 		//if( document.querySelector('.confirmbox')!=null ) return;
 
 		var yesBtnId = 'confirm-yes-' + (Math.floor( Math.random()*9000 )+100),
@@ -306,10 +314,19 @@ var core = {
 			html += '<span class="icon confirm"></span><p>'+confirmMessage+'</p>';
 			html += '<button type="button" class="confirm-yes-btn" id="'+yesBtnId+'">Да</button>';
 			html += '<button type="button" class="confirm-no-btn" id="'+noBtnId+'">Нет</button>';
+=======
+		if( document.querySelector('.confirmbox')!=null ) return;
+
+		var html = '<div class="confirmbox">';
+			html += '<span class="icon confirm"></span><p>'+confirmMessage+'</p>';
+			html += '<button type="button" id="confirmYes">Да</button>';
+			html += '<button type="button" id="confirmNo">Нет</button>';
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 			html += '</div>';
 
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 
+<<<<<<< HEAD
 			var yesBtn = document.querySelector('#' + yesBtnId),
 				noBtn = document.querySelector('#' + noBtnId),
 				box = document.querySelector('#' + boxId),
@@ -359,10 +376,46 @@ var core = {
 
 			//set box focus
 			box.focus();
+=======
+			var confirmYesFn = function(e){
+				e.preventDefault();
+				if(yesCallback && typeof(yesCallback)=='function') yesCallback();
+				if( $.splashClose != undefined ) $.splashClose();
+				return;
+			}	
+
+			var confirmNoFn = function(e){
+				e.preventDefault();
+				if(noCallback && typeof(noCallback)=='function') noCallback();
+				if( $.splashClose != undefined ) $.splashClose();
+			}
+
+			var keyDownFn = function(e){
+				if(e.keyCode == 13){
+					confirmYesFn(e);
+					return;
+				}
+
+				if(e.keyCode == 27){
+					confirmNoFn(e);
+					return;
+				}		
+			}
+
+			document.querySelector("#confirmYes").removeEventListener('click', confirmYesFn, false);
+			document.querySelector("#confirmYes").addEventListener('click', confirmYesFn, false);
+
+			document.querySelector("#confirmNo").removeEventListener('click', confirmNoFn, false);
+			document.querySelector("#confirmNo").addEventListener('click', confirmNoFn, false);
+			
+			document.removeEventListener('keydown', keyDownFn, false);
+			document.addEventListener('keydown', keyDownFn, false);
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 
 		}});
 	},
 	errorBox:function( errorMessage, callback ){
+<<<<<<< HEAD
 		
 		var okBtnId = 'error-ok-' + (Math.floor( Math.random()*9000 )+100),
 			boxId = 'error-box-' + (Math.floor( Math.random()*9000 )+100),
@@ -459,6 +512,57 @@ var core = {
 			
 			html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
 			html += '</div>';
+=======
+
+		var html = '<div class="errorbox">';
+		html += '<span class="icon error"></span><p>'+errorMessage+'</p>';
+		html += '<button type="button" id="ok">OK</button>';
+		html += '</div>';
+		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
+
+			$("#ok").click(function(e){
+				e.preventDefault();
+				if(callback && typeof(callback)=='function') callback();
+				if( $.splashClose != undefined ) $.splashClose();
+			});
+			
+			$(document).off('keydown.errorBox');
+			$(document).on('keydown.errorBox',function(e){
+				if(e.keyCode == 13){
+					$("#ok").click();
+				}
+			});
+		}});
+	},
+	infoBox:function( infoMessage, callback ){
+		var html = '<div class="infobox">';
+		html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
+		html += '<button type="button" id="ok">OK</button>';
+		html += '</div>';
+		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
+
+			$("#ok").click(function(e){
+				e.preventDefault();
+				if(callback && typeof(callback)=='function') callback();
+				if( $.splashClose != undefined ) $.splashClose();
+			});
+			
+			$(document).off('keydown.infoBox');
+			$(document).on('keydown.infoBox',function(e){
+				if(e.keyCode == 13){
+					$("#ok").click();
+				}
+			});
+		}});
+	},
+	messageBox:function( infoMessage, delay, callback ){
+		var hideDelay = 1000;
+		var callbackF = undefined;
+
+		var html = '<div class="infobox">';
+		html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
+		html += '</div>';
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 			if( callback && typeof(callback)=='function' ) callbackF = callback;

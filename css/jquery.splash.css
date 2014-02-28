@@ -3,10 +3,18 @@
 	border:0;
 	color: #FFF;
 	text-align: center;
+<<<<<<< HEAD
+=======
+	max-width:600px;
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 	position: fixed!important;
 	margin-left: 0!important;
 	left: 0!important;
 	right: 0;
+<<<<<<< HEAD
+=======
+	max-width: initial;
+>>>>>>> 74a3abfbee3de615f24a5c17dc5c915dbee51c31
 	padding: 12px 0;
 	background: #7144B4;
 	text-transform: uppercase;
