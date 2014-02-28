@@ -81,7 +81,8 @@ var intID = setInterval(function(){
 					extraAllowedContent :{
 						'img':{
 							attributes:'data-fancy,data-type'
-						}
+						},
+						'script':{}
 					},
 					filebrowserBrowseUrl : '/system/admin/editor/js/elfinder.html?mode=file',
 					filebrowserImageBrowseUrl : '/system/admin/editor/js/elfinder.html?mode=image',

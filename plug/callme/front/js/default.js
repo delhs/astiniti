@@ -3,10 +3,18 @@ var plug_callme = {
 	init:function(){
 		var elements = document.querySelectorAll("a.callme");
 		Array.prototype.forEach.call(elements, function(el, i){
-			el.addEventListener('click', function(e){
-				e.preventDefault();
-				plug_callme.showForm();
-			}, false);
+			if( el.addEventListener ){
+				el.addEventListener('click', function(e){
+					e.preventDefault();
+					plug_callme.showForm();
+				}, false);
+			}else{
+				el.attachEvent('onclick', function(e){
+					if(e.preventDefault) e.preventDefault();
+					plug_callme.showForm();
+				});
+			}
+
 		});
 	},
 	showForm:function(){

@@ -1,4 +1,5 @@
 {strip}
+
 <div class="page-wrapper">
 	<div class="page-buffer">
 		<!--cap block-->

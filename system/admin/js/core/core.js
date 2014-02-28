@@ -1,18 +1,32 @@
-String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+//return string trim
+if(!String.prototype.trim)String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
 
-String.prototype.ltrim=function(){return this.replace(/^\s+/,'');};
+//return string left trim
+if(!String.prototype.ltrim)String.prototype.ltrim=function(){return this.replace(/^\s+/,'');};
 
-String.prototype.rtrim=function(){return this.replace(/\s+$/,'');};
+//return string right trim
+if(!String.prototype.rtrim)String.prototype.rtrim=function(){return this.replace(/\s+$/,'');};
 
-String.prototype.fulltrim=function(){return this.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,'').replace(/\s+/g,' ');};
+//return string full trim
+if(!String.prototype.fulltrim)String.prototype.fulltrim=function(){return this.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,'').replace(/\s+/g,' ');};
+		
+//return true if string is integer
+if(!String.prototype.isInt)String.prototype.isInt=function(){return !isNaN(parseFloat(this)) && isFinite(this);};
 
-String.prototype.isInt=function(){return !isNaN(parseFloat(this)) && isFinite(this);};
+//return string md5 hash
+if(!String.prototype.md5)String.prototype.md5=function(){function h(a,b){var c,d,f,e,g;f=a&2147483648;e=b&2147483648;c=a&1073741824;d=b&1073741824;g=(a&1073741823)+(b&1073741823);return c&d?g^2147483648^f^e:c|d?g&1073741824?g^3221225472^f^e:g^1073741824^f^e:g^f^e}function k(a,b,c,d,f,e,g){a=h(a,h(h(b&c|~b&d,f),g));return h(a<<e|a>>>32-e,b)}function l(a,b,c,d,f,e,g){a=h(a,h(h(b&d|c&~d,f),g));return h(a<<e|a>>>32-e,b)}function m(a,b,d,c,e,f,g){a=h(a,h(h(b^d^c,e),g));return h(a<<f|a>>>32-f,b)}function n(a,b,d,c,f,e,g){a=h(a,h(h(d^(b|~c),f),g));return h(a<<e|a>>>32-e,b)}function p(a){var b="",d="",c;for(c=0;3>=c;c++)d=a>>>8*c&255,d="0"+d.toString(16),b+=d.substr(d.length-2,2);return b}var f;f=[];var e,q,r,s,t,a,b,c,d;f=function(a){a=a.replace(/\r\n/g,"\n");for(var b="",d=0;d<a.length;d++){var c=a.charCodeAt(d);128>c?b+=String.fromCharCode(c):(127<c&&2048>c?b+=String.fromCharCode(c>>6|192):(b+=String.fromCharCode(c>>12|224),b+=String.fromCharCode(c>>6&63|128)),b+=String.fromCharCode(c&63|128))}return b}(this);f=function(b){var a,c=b.length;a=c+8;for(var d=16*((a-a%64)/64+1),e=Array(d-1),f=0,g=0;g<c;)a=(g-g%4)/4,f=8*(g%4),e[a]|=b.charCodeAt(g)<<f,g++;a=(g-g%4)/4;e[a]|=128<<8*(g%4);e[d-2]=c<<3;e[d-1]=c>>>29;return e}(f);a=1732584193;b=4023233417;c=2562383102;d=271733878;for(e=0;e<f.length;e+=16)q=a,r=b,s=c,t=d,a=k(a,b,c,d,f[e+0],7,3614090360),d=k(d,a,b,c,f[e+1],12,3905402710),c=k(c,d,a,b,f[e+2],17,606105819),b=k(b,c,d,a,f[e+3],22,3250441966),a=k(a,b,c,d,f[e+4],7,4118548399),d=k(d,a,b,c,f[e+5],12,1200080426),c=k(c,d,a,b,f[e+6],17,2821735955),b=k(b,c,d,a,f[e+7],22,4249261313),a=k(a,b,c,d,f[e+8],7,1770035416),d=k(d,a,b,c,f[e+9],12,2336552879),c=k(c,d,a,b,f[e+10],17,4294925233),b=k(b,c,d,a,f[e+11],22,2304563134),a=k(a,b,c,d,f[e+12],7,1804603682),d=k(d,a,b,c,f[e+13],12,4254626195),c=k(c,d,a,b,f[e+14],17,2792965006),b=k(b,c,d,a,f[e+15],22,1236535329),a=l(a,b,c,d,f[e+1],5,4129170786),d=l(d,a,b,c,f[e+6],9,3225465664),c=l(c,d,a,b,f[e+11],14,643717713),b=l(b,c,d,a,f[e+0],20,3921069994),a=l(a,b,c,d,f[e+5],5,3593408605),d=l(d,a,b,c,f[e+10],9,38016083),c=l(c,d,a,b,f[e+15],14,3634488961),b=l(b,c,d,a,f[e+4],20,3889429448),a=l(a,b,c,d,f[e+9],5,568446438),d=l(d,a,b,c,f[e+14],9,3275163606),c=l(c,d,a,b,f[e+3],14,4107603335),b=l(b,c,d,a,f[e+8],20,1163531501),a=l(a,b,c,d,f[e+13],5,2850285829),d=l(d,a,b,c,f[e+2],9,4243563512),c=l(c,d,a,b,f[e+7],14,1735328473),b=l(b,c,d,a,f[e+12],20,2368359562),a=m(a,b,c,d,f[e+5],4,4294588738),d=m(d,a,b,c,f[e+8],11,2272392833),c=m(c,d,a,b,f[e+11],16,1839030562),b=m(b,c,d,a,f[e+14],23,4259657740),a=m(a,b,c,d,f[e+1],4,2763975236),d=m(d,a,b,c,f[e+4],11,1272893353),c=m(c,d,a,b,f[e+7],16,4139469664),b=m(b,c,d,a,f[e+10],23,3200236656),a=m(a,b,c,d,f[e+13],4,681279174),d=m(d,a,b,c,f[e+0],11,3936430074),c=m(c,d,a,b,f[e+3],16,3572445317),b=m(b,c,d,a,f[e+6],23,76029189),a=m(a,b,c,d,f[e+9],4,3654602809),d=m(d,a,b,c,f[e+12],11,3873151461),c=m(c,d,a,b,f[e+15],16,530742520),b=m(b,c,d,a,f[e+2],23,3299628645),a=n(a,b,c,d,f[e+0],6,4096336452),d=n(d,a,b,c,f[e+7],10,1126891415),c=n(c,d,a,b,f[e+14],15,2878612391),b=n(b,c,d,a,f[e+5],21,4237533241),a=n(a,b,c,d,f[e+12],6,1700485571),d=n(d,a,b,c,f[e+3],10,2399980690),c=n(c,d,a,b,f[e+10],15,4293915773),b=n(b,c,d,a,f[e+1],21,2240044497),a=n(a,b,c,d,f[e+8],6,1873313359),d=n(d,a,b,c,f[e+15],10,4264355552),c=n(c,d,a,b,f[e+6],15,2734768916),b=n(b,c,d,a,f[e+13],21,1309151649),a=n(a,b,c,d,f[e+4],6,4149444226),d=n(d,a,b,c,f[e+11],10,3174756917),c=n(c,d,a,b,f[e+2],15,718787259),b=n(b,c,d,a,f[e+9],21,3951481745),a=h(a,q),b=h(b,r),c=h(c,s),d=h(d,t);return(p(a)+p(b)+p(c)+p(d)).toLowerCase()};
 
-String.prototype.md5=function(){function h(a,b){var c,d,f,e,g;f=a&2147483648;e=b&2147483648;c=a&1073741824;d=b&1073741824;g=(a&1073741823)+(b&1073741823);return c&d?g^2147483648^f^e:c|d?g&1073741824?g^3221225472^f^e:g^1073741824^f^e:g^f^e}function k(a,b,c,d,f,e,g){a=h(a,h(h(b&c|~b&d,f),g));return h(a<<e|a>>>32-e,b)}function l(a,b,c,d,f,e,g){a=h(a,h(h(b&d|c&~d,f),g));return h(a<<e|a>>>32-e,b)}function m(a,b,d,c,e,f,g){a=h(a,h(h(b^d^c,e),g));return h(a<<f|a>>>32-f,b)}function n(a,b,d,c,f,e,g){a=h(a,h(h(d^(b|~c),f),g));return h(a<<e|a>>>32-e,b)}function p(a){var b="",d="",c;for(c=0;3>=c;c++)d=a>>>8*c&255,d="0"+d.toString(16),b+=d.substr(d.length-2,2);return b}var f;f=[];var e,q,r,s,t,a,b,c,d;f=function(a){a=a.replace(/\r\n/g,"\n");for(var b="",d=0;d<a.length;d++){var c=a.charCodeAt(d);128>c?b+=String.fromCharCode(c):(127<c&&2048>c?b+=String.fromCharCode(c>>6|192):(b+=String.fromCharCode(c>>12|224),b+=String.fromCharCode(c>>6&63|128)),b+=String.fromCharCode(c&63|128))}return b}(this);f=function(b){var a,c=b.length;a=c+8;for(var d=16*((a-a%64)/64+1),e=Array(d-1),f=0,g=0;g<c;)a=(g-g%4)/4,f=8*(g%4),e[a]|=b.charCodeAt(g)<<f,g++;a=(g-g%4)/4;e[a]|=128<<8*(g%4);e[d-2]=c<<3;e[d-1]=c>>>29;return e}(f);a=1732584193;b=4023233417;c=2562383102;d=271733878;for(e=0;e<f.length;e+=16)q=a,r=b,s=c,t=d,a=k(a,b,c,d,f[e+0],7,3614090360),d=k(d,a,b,c,f[e+1],12,3905402710),c=k(c,d,a,b,f[e+2],17,606105819),b=k(b,c,d,a,f[e+3],22,3250441966),a=k(a,b,c,d,f[e+4],7,4118548399),d=k(d,a,b,c,f[e+5],12,1200080426),c=k(c,d,a,b,f[e+6],17,2821735955),b=k(b,c,d,a,f[e+7],22,4249261313),a=k(a,b,c,d,f[e+8],7,1770035416),d=k(d,a,b,c,f[e+9],12,2336552879),c=k(c,d,a,b,f[e+10],17,4294925233),b=k(b,c,d,a,f[e+11],22,2304563134),a=k(a,b,c,d,f[e+12],7,1804603682),d=k(d,a,b,c,f[e+13],12,4254626195),c=k(c,d,a,b,f[e+14],17,2792965006),b=k(b,c,d,a,f[e+15],22,1236535329),a=l(a,b,c,d,f[e+1],5,4129170786),d=l(d,a,b,c,f[e+6],9,3225465664),c=l(c,d,a,b,f[e+11],14,643717713),b=l(b,c,d,a,f[e+0],20,3921069994),a=l(a,b,c,d,f[e+5],5,3593408605),d=l(d,a,b,c,f[e+10],9,38016083),c=l(c,d,a,b,f[e+15],14,3634488961),b=l(b,c,d,a,f[e+4],20,3889429448),a=l(a,b,c,d,f[e+9],5,568446438),d=l(d,a,b,c,f[e+14],9,3275163606),c=l(c,d,a,b,f[e+3],14,4107603335),b=l(b,c,d,a,f[e+8],20,1163531501),a=l(a,b,c,d,f[e+13],5,2850285829),d=l(d,a,b,c,f[e+2],9,4243563512),c=l(c,d,a,b,f[e+7],14,1735328473),b=l(b,c,d,a,f[e+12],20,2368359562),a=m(a,b,c,d,f[e+5],4,4294588738),d=m(d,a,b,c,f[e+8],11,2272392833),c=m(c,d,a,b,f[e+11],16,1839030562),b=m(b,c,d,a,f[e+14],23,4259657740),a=m(a,b,c,d,f[e+1],4,2763975236),d=m(d,a,b,c,f[e+4],11,1272893353),c=m(c,d,a,b,f[e+7],16,4139469664),b=m(b,c,d,a,f[e+10],23,3200236656),a=m(a,b,c,d,f[e+13],4,681279174),d=m(d,a,b,c,f[e+0],11,3936430074),c=m(c,d,a,b,f[e+3],16,3572445317),b=m(b,c,d,a,f[e+6],23,76029189),a=m(a,b,c,d,f[e+9],4,3654602809),d=m(d,a,b,c,f[e+12],11,3873151461),c=m(c,d,a,b,f[e+15],16,530742520),b=m(b,c,d,a,f[e+2],23,3299628645),a=n(a,b,c,d,f[e+0],6,4096336452),d=n(d,a,b,c,f[e+7],10,1126891415),c=n(c,d,a,b,f[e+14],15,2878612391),b=n(b,c,d,a,f[e+5],21,4237533241),a=n(a,b,c,d,f[e+12],6,1700485571),d=n(d,a,b,c,f[e+3],10,2399980690),c=n(c,d,a,b,f[e+10],15,4293915773),b=n(b,c,d,a,f[e+1],21,2240044497),a=n(a,b,c,d,f[e+8],6,1873313359),d=n(d,a,b,c,f[e+15],10,4264355552),c=n(c,d,a,b,f[e+6],15,2734768916),b=n(b,c,d,a,f[e+13],21,1309151649),a=n(a,b,c,d,f[e+4],6,4149444226),d=n(d,a,b,c,f[e+11],10,3174756917),c=n(c,d,a,b,f[e+2],15,718787259),b=n(b,c,d,a,f[e+9],21,3951481745),a=h(a,q),b=h(b,r),c=h(c,s),d=h(d,t);return(p(a)+p(b)+p(c)+p(d)).toLowerCase()};
+//return translit string to url
+if(!String.prototype.translit)String.prototype.translit=function(){var c={"\u0410":"A","\u0430":"a","\u0411":"B","\u0431":"b","\u0412":"V","\u0432":"v","\u0413":"G","\u0433":"g","\u0414":"D","\u0434":"d","\u0415":"E","\u0435":"e","\u0401":"Yo","\u0451":"yo","\u0416":"Zh","\u0436":"zh","\u0417":"Z","\u0437":"z","\u0418":"I","\u0438":"i","\u0419":"Y","\u0439":"y","\u041a":"K","\u043a":"k","\u041b":"L","\u043b":"l","\u041c":"M","\u043c":"m","\u041d":"N","\u043d":"n","\u041e":"O","\u043e":"o","\u041f":"P","\u043f":"p","\u0420":"R","\u0440":"r","\u0421":"S","\u0441":"s","\u0422":"T","\u0442":"t","\u0423":"U","\u0443":"u","\u0424":"F","\u0444":"f","\u0425":"Kh","\u0445":"kh","\u0426":"Ts","\u0446":"ts","\u0427":"Ch","\u0447":"ch","\u0428":"Sh","\u0448":"sh","\u0429":"Sch","\u0449":"sch","\u042a":"","\u044a":"","\u042b":"Y","\u044b":"y","\u042c":"","\u044c":"","\u042d":"E","\u044d":"e","\u042e":"Yu","\u044e":"yu","\u042f":"Ya","\u044f":"ya"," ":"_","-":"_","@":"_","!":"_","#":"_","%":"_",$:"_","^":"_","&":"_","*":"_","(":"_",")":"_","'":"_",'"':"_","\u2116":"_",";":"_",":":"_","?":"_","+":"_","<":"_",">":"_",".":"_",",":"_"},a="",b;for(b in c)a+=b;a=RegExp("["+a+"]","g");b=function(a){return a in c?c[a]:""};return function(){return this.replace(a,b)}}();
 
-String.prototype.translit=function(){var c={"\u0410":"A","\u0430":"a","\u0411":"B","\u0431":"b","\u0412":"V","\u0432":"v","\u0413":"G","\u0433":"g","\u0414":"D","\u0434":"d","\u0415":"E","\u0435":"e","\u0401":"Yo","\u0451":"yo","\u0416":"Zh","\u0436":"zh","\u0417":"Z","\u0437":"z","\u0418":"I","\u0438":"i","\u0419":"Y","\u0439":"y","\u041a":"K","\u043a":"k","\u041b":"L","\u043b":"l","\u041c":"M","\u043c":"m","\u041d":"N","\u043d":"n","\u041e":"O","\u043e":"o","\u041f":"P","\u043f":"p","\u0420":"R","\u0440":"r","\u0421":"S","\u0441":"s","\u0422":"T","\u0442":"t","\u0423":"U","\u0443":"u","\u0424":"F","\u0444":"f","\u0425":"Kh","\u0445":"kh","\u0426":"Ts","\u0446":"ts","\u0427":"Ch","\u0447":"ch","\u0428":"Sh","\u0448":"sh","\u0429":"Sch","\u0449":"sch","\u042a":"","\u044a":"","\u042b":"Y","\u044b":"y","\u042c":"","\u044c":"","\u042d":"E","\u044d":"e","\u042e":"Yu","\u044e":"yu","\u042f":"Ya","\u044f":"ya"," ":"_","-":"_","@":"_","!":"_","#":"_","%":"_",$:"_","^":"_","&":"_","*":"_","(":"_",")":"_","'":"_",'"':"_","\u2116":"_",";":"_",":":"_","?":"_","+":"_","<":"_",">":"_",".":"_",",":"_"},a="",b;for(b in c)a+=b;a=RegExp("["+a+"]","g");b=function(a){return a in c?c[a]:""};return function(){return this.replace(a,b)}}();
+//return path basename
+if(!String.prototype.basename)String.prototype.basename=function(){parts = this.split( '/' );return parts[parts.length-1];};
 
-String.prototype.basename=function(){parts = this.split( '/' );return parts[parts.length-1];};
+//convert angle to rad
+if(!Number.prototype.toRad)Number.prototype.toRad=function(){return(this*Math.PI)/180;};
+
+//convert rad to angle
+if(!Number.prototype.toAngle)Number.prototype.toAngle=function(){ return Math.ceil((this*180)/Math.PI);};
 
 var admin = {
 	themes:undefined,
@@ -921,7 +935,8 @@ var admin = {
 				extraAllowedContent :{
 					'img':{
 						attributes:'data-fancy,data-type'
-					}
+					},
+					'script':{}
 				},
 				filebrowserBrowseUrl : '/system/admin/editor/js/elfinder.html?mode=file',
 				filebrowserImageBrowseUrl : '/system/admin/editor/js/elfinder.html?mode=image',
@@ -1096,11 +1111,12 @@ var admin = {
 				return false;
 			}	
 		},
-		/* upload file */
-		/* @param necessarily STRING inputId - id of input type="file" */
-		/* @param necessarily STRING modName - module name */
-		/* @param necessarily STRING action     - just action param, for example: "uploadMyFile"   */
-		/* @param FUNCTION callback - callback function */
+		/** upload file
+			@param necessarily STRING inputId - id of input type="file"
+			@param necessarily STRING modName - module name
+			@param necessarily STRING action     - just action param, for example: "uploadMyFile"
+			@param FUNCTION callback - callback function
+		 */
 		upload:function( inputId, modName, action, callback ){	
 			admin.block();
 			var filename = $("#"+inputId).attr('name');
@@ -1173,11 +1189,12 @@ var admin = {
 				return false;
 			}
 		},
-		/* upload file */
-		/* @param necessarily STRING inputId - id of input type="file" */
-		/* @param necessarily STRING plugName - plug name */
-		/* @param necessarily STRING action     - just action param, for example: "uploadMyFile"   */
-		/* @param FUNCTION callback - callback function  */
+		/** upload file
+			@param necessarily STRING inputId - id of input type="file"
+			@param necessarily STRING plugName - plug name
+			@param necessarily STRING action     - just action param, for example: "uploadMyFile"
+			@param FUNCTION callback - callback function  
+		*/
 		upload:function( inputId, plugName, action, callback ){	
 			admin.block();
 			var filename = $("#"+inputId).attr('name');
@@ -1214,11 +1231,12 @@ var admin = {
 			admin.unblock();
 		}
 	},
-	/* ajax request and validate forms */
-	/* @param necessarily STRING panelName - panel class name */
-	/* @param necessarily OBJECT OR STRING OR ARRAY postArray - post data array */
-	/* @param HANDLE formHandle - form handle for validator */
-	/* @param FUNCTION callback - callback function */
+	/** ajax request and validate forms
+		@param necessarily STRING panelName - panel class name
+		@param necessarily OBJECT OR STRING OR ARRAY postArray - post data array
+		@param HANDLE formHandle - form handle for validator
+		@param FUNCTION callback - callback function
+	 */
 	ajax:function( panelName, postArray, formHandle, callback ){
 
 		formHandle = arguments[2];
@@ -1262,11 +1280,12 @@ var admin = {
 			return false;
 		}
 	},
-	/* upload file */
-	/* @param necessarily STRING inputId - id of input type="file" */
-	/* @param necessarily STRING panelName - panel class name */
-	/* @param necessarily STRING action     - just action param, for example: "uploadMyFile"   */
-	/* @param FUNCTION callback - callback function    */
+	/** upload file
+		@param necessarily STRING inputId - id of input type="file"
+		@param necessarily STRING panelName - panel class name
+		@param necessarily STRING action     - just action param, for example: "uploadMyFile"
+		@param FUNCTION callback - callback function    
+	*/
 	upload:function( inputId, panelName, action, callback ){
 		var filename = $("#"+inputId).attr('name');
 		this.tmp = callback;

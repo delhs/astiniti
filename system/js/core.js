@@ -29,10 +29,10 @@ if(!Number.prototype.toRad)Number.prototype.toRad=function(){return(this*Math.PI
 //convert rad to angle
 if(!Number.prototype.toAngle)Number.prototype.toAngle=function(){ return Math.ceil((this*180)/Math.PI);};
 
-
 var core = {
 	
 	init:function(){
+
 		//browser detect
 		this.browser.detect();
 
@@ -296,102 +296,169 @@ var core = {
 	/* confirmation dialog box */
 	confirmBox:function( confirmMessage, yesCallback, noCallback ){
 
-		if( document.querySelector('.confirmbox')!=null ) return;
+		//if( document.querySelector('.confirmbox')!=null ) return;
 
-		var html = '<div class="confirmbox">';
+		var yesBtnId = 'confirm-yes-' + (Math.floor( Math.random()*9000 )+100),
+			noBtnId = 'confirm-no-' + (Math.floor( Math.random()*9000 )+100),
+			boxId = 'confirm-box-' + (Math.floor( Math.random()*9000 )+100),
+			html = '<div class="confirmbox" id="'+boxId+'" tabindex="0">';
+			
 			html += '<span class="icon confirm"></span><p>'+confirmMessage+'</p>';
-			html += '<button type="button" id="confirmYes">Да</button>';
-			html += '<button type="button" id="confirmNo">Нет</button>';
+			html += '<button type="button" class="confirm-yes-btn" id="'+yesBtnId+'">Да</button>';
+			html += '<button type="button" class="confirm-no-btn" id="'+noBtnId+'">Нет</button>';
 			html += '</div>';
 
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 
-			var confirmYesFn = function(e){
-				e.preventDefault();
-				if(yesCallback && typeof(yesCallback)=='function') yesCallback();
-				if( $.splashClose != undefined ) $.splashClose();
-				return;
-			}	
-
-			var confirmNoFn = function(e){
-				e.preventDefault();
-				if(noCallback && typeof(noCallback)=='function') noCallback();
-				if( $.splashClose != undefined ) $.splashClose();
-			}
-
-			var keyDownFn = function(e){
-				if(e.keyCode == 13){
-					confirmYesFn(e);
+			var yesBtn = document.querySelector('#' + yesBtnId),
+				noBtn = document.querySelector('#' + noBtnId),
+				box = document.querySelector('#' + boxId),
+				confirmYesFn = function(e){
+					if(e.preventDefault) e.preventDefault();
+					if(yesCallback && typeof(yesCallback)=='function') yesCallback();
+					if( $.splashClose != undefined ) $.splashClose();
 					return;
+				},
+				confirmNoFn = function(e){
+					if(e.preventDefault) e.preventDefault();
+					if(noCallback && typeof(noCallback)=='function') noCallback();
+					if( $.splashClose != undefined ) $.splashClose();
+				},
+				keyDownFn = function(e){
+					if(e.keyCode == 13){
+						confirmYesFn(e);
+						return;
+					}
+				
+					if(e.keyCode == 27){
+						confirmNoFn(e);
+						return;
+					}		
 				}
 
-				if(e.keyCode == 27){
-					confirmNoFn(e);
-					return;
-				}		
+			//yes button event
+			if( yesBtn.addEventListener ){
+				yesBtn.addEventListener('click', confirmYesFn, false);
+			}else{
+				yesBtn.attachEvent('onclick', confirmYesFn);
 			}
 
-			document.querySelector("#confirmYes").removeEventListener('click', confirmYesFn, false);
-			document.querySelector("#confirmYes").addEventListener('click', confirmYesFn, false);
+			//no button event
+			if( noBtn.addEventListener ){
+				noBtn.addEventListener('click', confirmNoFn, false);
+			}else{
+				noBtn.attachEvent('onclick', confirmNoFn);
+			}
 
-			document.querySelector("#confirmNo").removeEventListener('click', confirmNoFn, false);
-			document.querySelector("#confirmNo").addEventListener('click', confirmNoFn, false);
-			
-			document.removeEventListener('keydown', keyDownFn, false);
-			document.addEventListener('keydown', keyDownFn, false);
+			//keydown event
+			if( box.addEventListener ){
+				box.addEventListener('keydown', keyDownFn, false);
+			}else{
+				box.attachEvent('onkeydown', keyDownFn);
+			}
+
+			//set box focus
+			box.focus();
 
 		}});
 	},
 	errorBox:function( errorMessage, callback ){
-
-		var html = '<div class="errorbox">';
-		html += '<span class="icon error"></span><p>'+errorMessage+'</p>';
-		html += '<button type="button" id="ok">OK</button>';
-		html += '</div>';
+		
+		var okBtnId = 'error-ok-' + (Math.floor( Math.random()*9000 )+100),
+			boxId = 'error-box-' + (Math.floor( Math.random()*9000 )+100),
+			html = '<div class="errorbox" id="'+boxId+'" tabindex="0">';
+			
+			html += '<span class="icon error"></span><p>'+errorMessage+'</p>';
+			html += '<button type="button" class="error-ok-btn" id="'+okBtnId+'">OK</button>';
+			html += '</div>';
+		
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 
-			$("#ok").click(function(e){
-				e.preventDefault();
-				if(callback && typeof(callback)=='function') callback();
-				if( $.splashClose != undefined ) $.splashClose();
-			});
+			var okBtn = document.querySelector('#' + okBtnId),
+				box = document.querySelector('#' + boxId),
 			
-			$(document).off('keydown.errorBox');
-			$(document).on('keydown.errorBox',function(e){
-				if(e.keyCode == 13){
-					$("#ok").click();
+				errorOkFn = function(e){
+					if(e.preventDefault) e.preventDefault();
+					if(callback && typeof(callback)=='function') callback();
+					if( $.splashClose != undefined ) $.splashClose();
+				},
+				keyDownFn = function(e){
+					if(e.keyCode == 13){
+						errorOkFn(e);
+						return;
+					}
 				}
-			});
+
+			//ok button event
+			if( okBtn.addEventListener ){
+				okBtn.addEventListener('click', errorOkFn, false);
+			}else{
+				okBtn.attachEvent('onclick', errorOkFn);
+			}
+
+			//keydown event
+			if( box.addEventListener ){
+				box.addEventListener('keydown', keyDownFn, false);
+			}else{
+				box.attachEvent('onkeydown', keyDownFn);
+			}
+
+			//set box focus
+			box.focus();
 		}});
 	},
 	infoBox:function( infoMessage, callback ){
-		var html = '<div class="infobox">';
-		html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
-		html += '<button type="button" id="ok">OK</button>';
-		html += '</div>';
+		var okBtnId = 'error-ok-' + (Math.floor( Math.random()*9000 )+100),
+			boxId = 'error-box-' + (Math.floor( Math.random()*9000 )+100),
+			
+			html = '<div class="infobox" id="'+boxId+'" tabindex="0">';
+			html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
+			html += '<button type="button" id="'+okBtnId+'">OK</button>';
+			html += '</div>';
+
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 
-			$("#ok").click(function(e){
-				e.preventDefault();
-				if(callback && typeof(callback)=='function') callback();
-				if( $.splashClose != undefined ) $.splashClose();
-			});
+			var okBtn = document.querySelector('#' + okBtnId),
+				box = document.querySelector('#' + boxId),
 			
-			$(document).off('keydown.infoBox');
-			$(document).on('keydown.infoBox',function(e){
-				if(e.keyCode == 13){
-					$("#ok").click();
+				infoOkFn = function(e){
+					if(e.preventDefault) e.preventDefault();
+					if(callback && typeof(callback)=='function') callback();
+					if( $.splashClose != undefined ) $.splashClose();
+				},
+				keyDownFn = function(e){
+					if(e.keyCode == 13){
+						infoOkFn(e);
+						return;
+					}
 				}
-			});
+
+			//ok button event
+			if( okBtn.addEventListener ){
+				okBtn.addEventListener('click', infoOkFn, false);
+			}else{
+				okBtn.attachEvent('onclick', infoOkFn);
+			}
+
+			//keydown event
+			if( box.addEventListener ){
+				box.addEventListener('keydown', keyDownFn, false);
+			}else{
+				box.attachEvent('onkeydown', keyDownFn);
+			}
+
+			//set box focus
+			box.focus();
 		}});
 	},
 	messageBox:function( infoMessage, delay, callback ){
-		var hideDelay = 1000;
-		var callbackF = undefined;
-
-		var html = '<div class="infobox">';
-		html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
-		html += '</div>';
+		var boxId = 'infomess-box-' + (Math.floor( Math.random()*9000 )+100),
+			callbackF = undefined,
+			hideDelay = 1000,
+			html = '<div class="infobox" id="'+boxId+'" tabindex="0">';
+			
+			html += '<span class="icon info"></span><p>'+infoMessage+'</p>';
+			html += '</div>';
 
 		$.splash(html, {closeBtn:false, closeOutClick:false, closeToEscape:false, durationOpen:200, durationClose:150, openCallback:function(){
 			if( callback && typeof(callback)=='function' ) callbackF = callback;
