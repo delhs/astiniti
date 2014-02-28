@@ -80,3 +80,7 @@ img{
 a[rel="tofancy"]>img{
 	cursor: inherit!important;
 }
+
+.test-class{
+    color:red;
+}
